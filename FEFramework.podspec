@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '5.0'
   
-  s.source = {:git=> 'git@github.com:FerrariXX/FEFramework.git'}
+  s.source = {:git=> 'git@github.com:FerrariXX/FEFramework.git',:tag => "0.1.0" }
 
   s.source_files = 'Source/**/*.{h,m,mm}'
   s.resources = 'Resources/**/*.{png,xib,wav,plist}', 'Source/**/*.{png,xib,wav,plist}'
