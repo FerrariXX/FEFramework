@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3A44C7818FC337400E9B254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A44C7718FC337400E9B254 /* Foundation.framework */; };
+		C3A44C7E18FC337400E9B254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A44C7C18FC337400E9B254 /* InfoPlist.strings */; };
+		C3A44CC718FC33C100E9B254 /* NSArray+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8718FC33C000E9B254 /* NSArray+FEExtension.h */; };
+		C3A44CC818FC33C100E9B254 /* NSArray+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C8818FC33C000E9B254 /* NSArray+FEExtension.m */; };
+		C3A44CC918FC33C100E9B254 /* NSDate+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8918FC33C000E9B254 /* NSDate+FEExtension.h */; };
+		C3A44CCA18FC33C100E9B254 /* NSDate+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C8A18FC33C000E9B254 /* NSDate+FEExtension.m */; };
+		C3A44CCB18FC33C100E9B254 /* NSDictionary+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8B18FC33C000E9B254 /* NSDictionary+FEExtension.h */; };
+		C3A44CCC18FC33C100E9B254 /* NSDictionary+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C8C18FC33C000E9B254 /* NSDictionary+FEExtension.m */; };
+		C3A44CCD18FC33C100E9B254 /* NSFileManager+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8D18FC33C000E9B254 /* NSFileManager+FEExtension.h */; };
+		C3A44CCE18FC33C100E9B254 /* NSFileManager+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C8E18FC33C000E9B254 /* NSFileManager+FEExtension.m */; };
+		C3A44CCF18FC33C100E9B254 /* NSObject+FEIvarAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8F18FC33C000E9B254 /* NSObject+FEIvarAccess.h */; };
+		C3A44CD018FC33C100E9B254 /* NSObject+FEIvarAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9018FC33C000E9B254 /* NSObject+FEIvarAccess.m */; };
+		C3A44CD118FC33C100E9B254 /* NSObject+FENib.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9118FC33C000E9B254 /* NSObject+FENib.h */; };
+		C3A44CD218FC33C100E9B254 /* NSObject+FENib.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9218FC33C000E9B254 /* NSObject+FENib.m */; };
+		C3A44CD318FC33C100E9B254 /* NSObject+FESwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9318FC33C000E9B254 /* NSObject+FESwizzle.h */; };
+		C3A44CD418FC33C100E9B254 /* NSObject+FESwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9418FC33C000E9B254 /* NSObject+FESwizzle.m */; };
+		C3A44CD518FC33C100E9B254 /* NSString+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9518FC33C000E9B254 /* NSString+FEExtension.h */; };
+		C3A44CD618FC33C100E9B254 /* NSString+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9618FC33C000E9B254 /* NSString+FEExtension.m */; };
+		C3A44CD718FC33C100E9B254 /* UIButton+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9718FC33C000E9B254 /* UIButton+FEExtension.h */; };
+		C3A44CD818FC33C100E9B254 /* UIButton+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9818FC33C000E9B254 /* UIButton+FEExtension.m */; };
+		C3A44CD918FC33C100E9B254 /* UIColor+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9918FC33C000E9B254 /* UIColor+FEExtension.h */; };
+		C3A44CDA18FC33C100E9B254 /* UIColor+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9A18FC33C000E9B254 /* UIColor+FEExtension.m */; };
+		C3A44CDB18FC33C100E9B254 /* UIDevice+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9B18FC33C000E9B254 /* UIDevice+FEExtension.h */; };
+		C3A44CDC18FC33C100E9B254 /* UIDevice+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9C18FC33C000E9B254 /* UIDevice+FEExtension.m */; };
+		C3A44CDD18FC33C100E9B254 /* UIDevice+FEProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9D18FC33C000E9B254 /* UIDevice+FEProcess.h */; };
+		C3A44CDE18FC33C100E9B254 /* UIDevice+FEProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44C9E18FC33C000E9B254 /* UIDevice+FEProcess.m */; };
+		C3A44CDF18FC33C100E9B254 /* UIImage+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C9F18FC33C000E9B254 /* UIImage+FEExtension.h */; };
+		C3A44CE018FC33C100E9B254 /* UIImage+FEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CA018FC33C000E9B254 /* UIImage+FEExtension.m */; };
+		C3A44CE118FC33C100E9B254 /* UIScreen+FEFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CA118FC33C000E9B254 /* UIScreen+FEFrame.h */; };
+		C3A44CE218FC33C100E9B254 /* UIScreen+FEFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CA218FC33C000E9B254 /* UIScreen+FEFrame.m */; };
+		C3A44CE318FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CA318FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.h */; };
+		C3A44CE418FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CA418FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.m */; };
+		C3A44CE518FC33C100E9B254 /* UIView+FEAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CA518FC33C000E9B254 /* UIView+FEAnimation.h */; };
+		C3A44CE618FC33C100E9B254 /* UIView+FEAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CA618FC33C000E9B254 /* UIView+FEAnimation.m */; };
+		C3A44CE718FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CA718FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.h */; };
+		C3A44CE818FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CA818FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.m */; };
+		C3A44CE918FC33C100E9B254 /* UIView+FECategory.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CA918FC33C000E9B254 /* UIView+FECategory.h */; };
+		C3A44CEA18FC33C100E9B254 /* UIView+FEGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CAA18FC33C000E9B254 /* UIView+FEGeometry.h */; };
+		C3A44CEB18FC33C100E9B254 /* UIView+FEGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CAB18FC33C000E9B254 /* UIView+FEGeometry.m */; };
+		C3A44CEC18FC33C100E9B254 /* UIView+FEHierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CAC18FC33C000E9B254 /* UIView+FEHierarchy.h */; };
+		C3A44CED18FC33C100E9B254 /* UIView+FEHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CAD18FC33C000E9B254 /* UIView+FEHierarchy.m */; };
+		C3A44CEE18FC33C100E9B254 /* UIView+FETouchBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CAE18FC33C000E9B254 /* UIView+FETouchBlocks.h */; };
+		C3A44CEF18FC33C100E9B254 /* UIView+FETouchBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CAF18FC33C000E9B254 /* UIView+FETouchBlocks.m */; };
+		C3A44CF018FC33C100E9B254 /* FEFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CB018FC33C000E9B254 /* FEFramework.h */; };
+		C3A44CF118FC33C100E9B254 /* FEDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CB218FC33C100E9B254 /* FEDebug.h */; };
+		C3A44CF218FC33C100E9B254 /* FEEnumToString.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CB318FC33C100E9B254 /* FEEnumToString.h */; };
+		C3A44CF318FC33C100E9B254 /* FEMacroDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CB418FC33C100E9B254 /* FEMacroDefine.h */; };
+		C3A44CF418FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CB718FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h */; };
+		C3A44CF518FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CB818FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m */; };
+		C3A44CF618FC33C100E9B254 /* FEEasingFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CB918FC33C100E9B254 /* FEEasingFunctions.c */; };
+		C3A44CF718FC33C100E9B254 /* FEEasingFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CBA18FC33C100E9B254 /* FEEasingFunctions.h */; };
+		C3A44CF818FC33C100E9B254 /* FEKeyframeEasingFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CBB18FC33C100E9B254 /* FEKeyframeEasingFunctions.c */; };
+		C3A44CF918FC33C100E9B254 /* FEKeyframeEasingFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CBC18FC33C100E9B254 /* FEKeyframeEasingFunctions.h */; };
+		C3A44CFA18FC33C100E9B254 /* FELocalStorageUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CBD18FC33C100E9B254 /* FELocalStorageUtil.h */; };
+		C3A44CFB18FC33C100E9B254 /* FELocalStorageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CBE18FC33C100E9B254 /* FELocalStorageUtil.m */; };
+		C3A44CFC18FC33C100E9B254 /* FEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CBF18FC33C100E9B254 /* FEReachability.h */; };
+		C3A44CFD18FC33C100E9B254 /* FEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CC018FC33C100E9B254 /* FEReachability.m */; };
+		C3A44CFE18FC33C100E9B254 /* FEReachAbilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CC118FC33C100E9B254 /* FEReachAbilityManager.h */; };
+		C3A44CFF18FC33C100E9B254 /* FEReachAbilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CC218FC33C100E9B254 /* FEReachAbilityManager.m */; };
+		C3A44D0018FC33C100E9B254 /* FEUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CC318FC33C100E9B254 /* FEUtil.h */; };
+		C3A44D0118FC33C100E9B254 /* FEUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CC418FC33C100E9B254 /* FEUtil.m */; };
+		C3A44D0218FC33C100E9B254 /* FEZip.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44CC518FC33C100E9B254 /* FEZip.h */; };
+		C3A44D0318FC33C100E9B254 /* FEZip.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A44CC618FC33C100E9B254 /* FEZip.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C3A44C7418FC337400E9B254 /* FEFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = FEFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A44C7718FC337400E9B254 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3A44C7B18FC337400E9B254 /* FEFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FEFramework-Info.plist"; sourceTree = "<group>"; };
+		C3A44C7D18FC337400E9B254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3A44C7F18FC337400E9B254 /* FEFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FEFramework-Prefix.pch"; sourceTree = "<group>"; };
+		C3A44C8718FC33C000E9B254 /* NSArray+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C8818FC33C000E9B254 /* NSArray+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C8918FC33C000E9B254 /* NSDate+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C8A18FC33C000E9B254 /* NSDate+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C8B18FC33C000E9B254 /* NSDictionary+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C8C18FC33C000E9B254 /* NSDictionary+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C8D18FC33C000E9B254 /* NSFileManager+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C8E18FC33C000E9B254 /* NSFileManager+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C8F18FC33C000E9B254 /* NSObject+FEIvarAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FEIvarAccess.h"; sourceTree = "<group>"; };
+		C3A44C9018FC33C000E9B254 /* NSObject+FEIvarAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FEIvarAccess.m"; sourceTree = "<group>"; };
+		C3A44C9118FC33C000E9B254 /* NSObject+FENib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FENib.h"; sourceTree = "<group>"; };
+		C3A44C9218FC33C000E9B254 /* NSObject+FENib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FENib.m"; sourceTree = "<group>"; };
+		C3A44C9318FC33C000E9B254 /* NSObject+FESwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FESwizzle.h"; sourceTree = "<group>"; };
+		C3A44C9418FC33C000E9B254 /* NSObject+FESwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FESwizzle.m"; sourceTree = "<group>"; };
+		C3A44C9518FC33C000E9B254 /* NSString+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C9618FC33C000E9B254 /* NSString+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C9718FC33C000E9B254 /* UIButton+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C9818FC33C000E9B254 /* UIButton+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C9918FC33C000E9B254 /* UIColor+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C9A18FC33C000E9B254 /* UIColor+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C9B18FC33C000E9B254 /* UIDevice+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44C9C18FC33C000E9B254 /* UIDevice+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44C9D18FC33C000E9B254 /* UIDevice+FEProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FEProcess.h"; sourceTree = "<group>"; };
+		C3A44C9E18FC33C000E9B254 /* UIDevice+FEProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FEProcess.m"; sourceTree = "<group>"; };
+		C3A44C9F18FC33C000E9B254 /* UIImage+FEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FEExtension.h"; sourceTree = "<group>"; };
+		C3A44CA018FC33C000E9B254 /* UIImage+FEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FEExtension.m"; sourceTree = "<group>"; };
+		C3A44CA118FC33C000E9B254 /* UIScreen+FEFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+FEFrame.h"; sourceTree = "<group>"; };
+		C3A44CA218FC33C000E9B254 /* UIScreen+FEFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+FEFrame.m"; sourceTree = "<group>"; };
+		C3A44CA318FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FEAutoResizeKeyboard.h"; sourceTree = "<group>"; };
+		C3A44CA418FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FEAutoResizeKeyboard.m"; sourceTree = "<group>"; };
+		C3A44CA518FC33C000E9B254 /* UIView+FEAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FEAnimation.h"; sourceTree = "<group>"; };
+		C3A44CA618FC33C000E9B254 /* UIView+FEAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FEAnimation.m"; sourceTree = "<group>"; };
+		C3A44CA718FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FEAutoResizeKeyboard.h"; sourceTree = "<group>"; };
+		C3A44CA818FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FEAutoResizeKeyboard.m"; sourceTree = "<group>"; };
+		C3A44CA918FC33C000E9B254 /* UIView+FECategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FECategory.h"; sourceTree = "<group>"; };
+		C3A44CAA18FC33C000E9B254 /* UIView+FEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FEGeometry.h"; sourceTree = "<group>"; };
+		C3A44CAB18FC33C000E9B254 /* UIView+FEGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FEGeometry.m"; sourceTree = "<group>"; };
+		C3A44CAC18FC33C000E9B254 /* UIView+FEHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FEHierarchy.h"; sourceTree = "<group>"; };
+		C3A44CAD18FC33C000E9B254 /* UIView+FEHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FEHierarchy.m"; sourceTree = "<group>"; };
+		C3A44CAE18FC33C000E9B254 /* UIView+FETouchBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FETouchBlocks.h"; sourceTree = "<group>"; };
+		C3A44CAF18FC33C000E9B254 /* UIView+FETouchBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FETouchBlocks.m"; sourceTree = "<group>"; };
+		C3A44CB018FC33C000E9B254 /* FEFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEFramework.h; sourceTree = "<group>"; };
+		C3A44CB218FC33C100E9B254 /* FEDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEDebug.h; sourceTree = "<group>"; };
+		C3A44CB318FC33C100E9B254 /* FEEnumToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEEnumToString.h; sourceTree = "<group>"; };
+		C3A44CB418FC33C100E9B254 /* FEMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMacroDefine.h; sourceTree = "<group>"; };
+		C3A44CB718FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+FEEasing.h"; sourceTree = "<group>"; };
+		C3A44CB818FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+FEEasing.m"; sourceTree = "<group>"; };
+		C3A44CB918FC33C100E9B254 /* FEEasingFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FEEasingFunctions.c; sourceTree = "<group>"; };
+		C3A44CBA18FC33C100E9B254 /* FEEasingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEEasingFunctions.h; sourceTree = "<group>"; };
+		C3A44CBB18FC33C100E9B254 /* FEKeyframeEasingFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FEKeyframeEasingFunctions.c; sourceTree = "<group>"; };
+		C3A44CBC18FC33C100E9B254 /* FEKeyframeEasingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEKeyframeEasingFunctions.h; sourceTree = "<group>"; };
+		C3A44CBD18FC33C100E9B254 /* FELocalStorageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FELocalStorageUtil.h; sourceTree = "<group>"; };
+		C3A44CBE18FC33C100E9B254 /* FELocalStorageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FELocalStorageUtil.m; sourceTree = "<group>"; };
+		C3A44CBF18FC33C100E9B254 /* FEReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEReachability.h; sourceTree = "<group>"; };
+		C3A44CC018FC33C100E9B254 /* FEReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEReachability.m; sourceTree = "<group>"; };
+		C3A44CC118FC33C100E9B254 /* FEReachAbilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEReachAbilityManager.h; sourceTree = "<group>"; };
+		C3A44CC218FC33C100E9B254 /* FEReachAbilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEReachAbilityManager.m; sourceTree = "<group>"; };
+		C3A44CC318FC33C100E9B254 /* FEUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEUtil.h; sourceTree = "<group>"; };
+		C3A44CC418FC33C100E9B254 /* FEUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEUtil.m; sourceTree = "<group>"; };
+		C3A44CC518FC33C100E9B254 /* FEZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEZip.h; sourceTree = "<group>"; };
+		C3A44CC618FC33C100E9B254 /* FEZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEZip.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A44C6E18FC337400E9B254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44C7818FC337400E9B254 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3A44C6718FC337400E9B254 = {
+			isa = PBXGroup;
+			children = (
+				C3A44C7918FC337400E9B254 /* FEFramework */,
+				C3A44C7618FC337400E9B254 /* Frameworks */,
+				C3A44C7518FC337400E9B254 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3A44C7518FC337400E9B254 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C7418FC337400E9B254 /* FEFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3A44C7618FC337400E9B254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C7718FC337400E9B254 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A44C7918FC337400E9B254 /* FEFramework */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C8518FC33C000E9B254 /* Source */,
+				C3A44C7A18FC337400E9B254 /* Supporting Files */,
+			);
+			path = FEFramework;
+			sourceTree = "<group>";
+		};
+		C3A44C7A18FC337400E9B254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C7B18FC337400E9B254 /* FEFramework-Info.plist */,
+				C3A44C7C18FC337400E9B254 /* InfoPlist.strings */,
+				C3A44C7F18FC337400E9B254 /* FEFramework-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3A44C8518FC33C000E9B254 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C8618FC33C000E9B254 /* FECategory */,
+				C3A44CB018FC33C000E9B254 /* FEFramework.h */,
+				C3A44CB118FC33C000E9B254 /* FEMacro */,
+				C3A44CB518FC33C100E9B254 /* FEUtility */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3A44C8618FC33C000E9B254 /* FECategory */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44C8718FC33C000E9B254 /* NSArray+FEExtension.h */,
+				C3A44C8818FC33C000E9B254 /* NSArray+FEExtension.m */,
+				C3A44C8918FC33C000E9B254 /* NSDate+FEExtension.h */,
+				C3A44C8A18FC33C000E9B254 /* NSDate+FEExtension.m */,
+				C3A44C8B18FC33C000E9B254 /* NSDictionary+FEExtension.h */,
+				C3A44C8C18FC33C000E9B254 /* NSDictionary+FEExtension.m */,
+				C3A44C8D18FC33C000E9B254 /* NSFileManager+FEExtension.h */,
+				C3A44C8E18FC33C000E9B254 /* NSFileManager+FEExtension.m */,
+				C3A44C8F18FC33C000E9B254 /* NSObject+FEIvarAccess.h */,
+				C3A44C9018FC33C000E9B254 /* NSObject+FEIvarAccess.m */,
+				C3A44C9118FC33C000E9B254 /* NSObject+FENib.h */,
+				C3A44C9218FC33C000E9B254 /* NSObject+FENib.m */,
+				C3A44C9318FC33C000E9B254 /* NSObject+FESwizzle.h */,
+				C3A44C9418FC33C000E9B254 /* NSObject+FESwizzle.m */,
+				C3A44C9518FC33C000E9B254 /* NSString+FEExtension.h */,
+				C3A44C9618FC33C000E9B254 /* NSString+FEExtension.m */,
+				C3A44C9718FC33C000E9B254 /* UIButton+FEExtension.h */,
+				C3A44C9818FC33C000E9B254 /* UIButton+FEExtension.m */,
+				C3A44C9918FC33C000E9B254 /* UIColor+FEExtension.h */,
+				C3A44C9A18FC33C000E9B254 /* UIColor+FEExtension.m */,
+				C3A44C9B18FC33C000E9B254 /* UIDevice+FEExtension.h */,
+				C3A44C9C18FC33C000E9B254 /* UIDevice+FEExtension.m */,
+				C3A44C9D18FC33C000E9B254 /* UIDevice+FEProcess.h */,
+				C3A44C9E18FC33C000E9B254 /* UIDevice+FEProcess.m */,
+				C3A44C9F18FC33C000E9B254 /* UIImage+FEExtension.h */,
+				C3A44CA018FC33C000E9B254 /* UIImage+FEExtension.m */,
+				C3A44CA118FC33C000E9B254 /* UIScreen+FEFrame.h */,
+				C3A44CA218FC33C000E9B254 /* UIScreen+FEFrame.m */,
+				C3A44CA318FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.h */,
+				C3A44CA418FC33C000E9B254 /* UITableView+FEAutoResizeKeyboard.m */,
+				C3A44CA518FC33C000E9B254 /* UIView+FEAnimation.h */,
+				C3A44CA618FC33C000E9B254 /* UIView+FEAnimation.m */,
+				C3A44CA718FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.h */,
+				C3A44CA818FC33C000E9B254 /* UIView+FEAutoResizeKeyboard.m */,
+				C3A44CA918FC33C000E9B254 /* UIView+FECategory.h */,
+				C3A44CAA18FC33C000E9B254 /* UIView+FEGeometry.h */,
+				C3A44CAB18FC33C000E9B254 /* UIView+FEGeometry.m */,
+				C3A44CAC18FC33C000E9B254 /* UIView+FEHierarchy.h */,
+				C3A44CAD18FC33C000E9B254 /* UIView+FEHierarchy.m */,
+				C3A44CAE18FC33C000E9B254 /* UIView+FETouchBlocks.h */,
+				C3A44CAF18FC33C000E9B254 /* UIView+FETouchBlocks.m */,
+			);
+			path = FECategory;
+			sourceTree = "<group>";
+		};
+		C3A44CB118FC33C000E9B254 /* FEMacro */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44CB218FC33C100E9B254 /* FEDebug.h */,
+				C3A44CB318FC33C100E9B254 /* FEEnumToString.h */,
+				C3A44CB418FC33C100E9B254 /* FEMacroDefine.h */,
+			);
+			path = FEMacro;
+			sourceTree = "<group>";
+		};
+		C3A44CB518FC33C100E9B254 /* FEUtility */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44CB618FC33C100E9B254 /* FEKeyFrameAnimation */,
+				C3A44CBD18FC33C100E9B254 /* FELocalStorageUtil.h */,
+				C3A44CBE18FC33C100E9B254 /* FELocalStorageUtil.m */,
+				C3A44CBF18FC33C100E9B254 /* FEReachability.h */,
+				C3A44CC018FC33C100E9B254 /* FEReachability.m */,
+				C3A44CC118FC33C100E9B254 /* FEReachAbilityManager.h */,
+				C3A44CC218FC33C100E9B254 /* FEReachAbilityManager.m */,
+				C3A44CC318FC33C100E9B254 /* FEUtil.h */,
+				C3A44CC418FC33C100E9B254 /* FEUtil.m */,
+				C3A44CC518FC33C100E9B254 /* FEZip.h */,
+				C3A44CC618FC33C100E9B254 /* FEZip.m */,
+			);
+			path = FEUtility;
+			sourceTree = "<group>";
+		};
+		C3A44CB618FC33C100E9B254 /* FEKeyFrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C3A44CB718FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h */,
+				C3A44CB818FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m */,
+				C3A44CB918FC33C100E9B254 /* FEEasingFunctions.c */,
+				C3A44CBA18FC33C100E9B254 /* FEEasingFunctions.h */,
+				C3A44CBB18FC33C100E9B254 /* FEKeyframeEasingFunctions.c */,
+				C3A44CBC18FC33C100E9B254 /* FEKeyframeEasingFunctions.h */,
+			);
+			path = FEKeyFrameAnimation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C3A44C6F18FC337400E9B254 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44CDB18FC33C100E9B254 /* UIDevice+FEExtension.h in Headers */,
+				C3A44CF418FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h in Headers */,
+				C3A44CCD18FC33C100E9B254 /* NSFileManager+FEExtension.h in Headers */,
+				C3A44CF718FC33C100E9B254 /* FEEasingFunctions.h in Headers */,
+				C3A44CF018FC33C100E9B254 /* FEFramework.h in Headers */,
+				C3A44CD318FC33C100E9B254 /* NSObject+FESwizzle.h in Headers */,
+				C3A44CD118FC33C100E9B254 /* NSObject+FENib.h in Headers */,
+				C3A44D0018FC33C100E9B254 /* FEUtil.h in Headers */,
+				C3A44CEE18FC33C100E9B254 /* UIView+FETouchBlocks.h in Headers */,
+				C3A44CD918FC33C100E9B254 /* UIColor+FEExtension.h in Headers */,
+				C3A44CDD18FC33C100E9B254 /* UIDevice+FEProcess.h in Headers */,
+				C3A44CF218FC33C100E9B254 /* FEEnumToString.h in Headers */,
+				C3A44CE918FC33C100E9B254 /* UIView+FECategory.h in Headers */,
+				C3A44CF918FC33C100E9B254 /* FEKeyframeEasingFunctions.h in Headers */,
+				C3A44CCF18FC33C100E9B254 /* NSObject+FEIvarAccess.h in Headers */,
+				C3A44D0218FC33C100E9B254 /* FEZip.h in Headers */,
+				C3A44CE118FC33C100E9B254 /* UIScreen+FEFrame.h in Headers */,
+				C3A44CE718FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.h in Headers */,
+				C3A44CCB18FC33C100E9B254 /* NSDictionary+FEExtension.h in Headers */,
+				C3A44CFE18FC33C100E9B254 /* FEReachAbilityManager.h in Headers */,
+				C3A44CE518FC33C100E9B254 /* UIView+FEAnimation.h in Headers */,
+				C3A44CEC18FC33C100E9B254 /* UIView+FEHierarchy.h in Headers */,
+				C3A44CD718FC33C100E9B254 /* UIButton+FEExtension.h in Headers */,
+				C3A44CF118FC33C100E9B254 /* FEDebug.h in Headers */,
+				C3A44CC918FC33C100E9B254 /* NSDate+FEExtension.h in Headers */,
+				C3A44CFC18FC33C100E9B254 /* FEReachability.h in Headers */,
+				C3A44CC718FC33C100E9B254 /* NSArray+FEExtension.h in Headers */,
+				C3A44CD518FC33C100E9B254 /* NSString+FEExtension.h in Headers */,
+				C3A44CF318FC33C100E9B254 /* FEMacroDefine.h in Headers */,
+				C3A44CDF18FC33C100E9B254 /* UIImage+FEExtension.h in Headers */,
+				C3A44CE318FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.h in Headers */,
+				C3A44CFA18FC33C100E9B254 /* FELocalStorageUtil.h in Headers */,
+				C3A44CEA18FC33C100E9B254 /* UIView+FEGeometry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C3A44C7318FC337400E9B254 /* FEFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A44C8218FC337400E9B254 /* Build configuration list for PBXNativeTarget "FEFramework" */;
+			buildPhases = (
+				C3A44C6C18FC337400E9B254 /* ShellScript */,
+				C3A44C6D18FC337400E9B254 /* Sources */,
+				C3A44C6E18FC337400E9B254 /* Frameworks */,
+				C3A44C6F18FC337400E9B254 /* Headers */,
+				C3A44C7018FC337400E9B254 /* Resources */,
+				C3A44C7118FC337400E9B254 /* ShellScript */,
+				C3A44C7218FC337400E9B254 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FEFramework;
+			productName = FEFramework;
+			productReference = C3A44C7418FC337400E9B254 /* FEFramework.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3A44C6818FC337400E9B254 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = FE;
+			};
+			buildConfigurationList = C3A44C6B18FC337400E9B254 /* Build configuration list for PBXProject "FEFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3A44C6718FC337400E9B254;
+			productRefGroup = C3A44C7518FC337400E9B254 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A44C7318FC337400E9B254 /* FEFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3A44C7018FC337400E9B254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44C7E18FC337400E9B254 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3A44C6C18FC337400E9B254 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A44C7118FC337400E9B254 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A44C7218FC337400E9B254 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR\" = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A44C6D18FC337400E9B254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A44CD818FC33C100E9B254 /* UIButton+FEExtension.m in Sources */,
+				C3A44CC818FC33C100E9B254 /* NSArray+FEExtension.m in Sources */,
+				C3A44D0118FC33C100E9B254 /* FEUtil.m in Sources */,
+				C3A44CD018FC33C100E9B254 /* NSObject+FEIvarAccess.m in Sources */,
+				C3A44CF818FC33C100E9B254 /* FEKeyframeEasingFunctions.c in Sources */,
+				C3A44CEB18FC33C100E9B254 /* UIView+FEGeometry.m in Sources */,
+				C3A44CE818FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.m in Sources */,
+				C3A44CEF18FC33C100E9B254 /* UIView+FETouchBlocks.m in Sources */,
+				C3A44D0318FC33C100E9B254 /* FEZip.m in Sources */,
+				C3A44CE018FC33C100E9B254 /* UIImage+FEExtension.m in Sources */,
+				C3A44CFB18FC33C100E9B254 /* FELocalStorageUtil.m in Sources */,
+				C3A44CFF18FC33C100E9B254 /* FEReachAbilityManager.m in Sources */,
+				C3A44CDC18FC33C100E9B254 /* UIDevice+FEExtension.m in Sources */,
+				C3A44CD218FC33C100E9B254 /* NSObject+FENib.m in Sources */,
+				C3A44CCE18FC33C100E9B254 /* NSFileManager+FEExtension.m in Sources */,
+				C3A44CFD18FC33C100E9B254 /* FEReachability.m in Sources */,
+				C3A44CDE18FC33C100E9B254 /* UIDevice+FEProcess.m in Sources */,
+				C3A44CD618FC33C100E9B254 /* NSString+FEExtension.m in Sources */,
+				C3A44CF518FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m in Sources */,
+				C3A44CE418FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.m in Sources */,
+				C3A44CCC18FC33C100E9B254 /* NSDictionary+FEExtension.m in Sources */,
+				C3A44CF618FC33C100E9B254 /* FEEasingFunctions.c in Sources */,
+				C3A44CE218FC33C100E9B254 /* UIScreen+FEFrame.m in Sources */,
+				C3A44CD418FC33C100E9B254 /* NSObject+FESwizzle.m in Sources */,
+				C3A44CDA18FC33C100E9B254 /* UIColor+FEExtension.m in Sources */,
+				C3A44CE618FC33C100E9B254 /* UIView+FEAnimation.m in Sources */,
+				C3A44CED18FC33C100E9B254 /* UIView+FEHierarchy.m in Sources */,
+				C3A44CCA18FC33C100E9B254 /* NSDate+FEExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3A44C7C18FC337400E9B254 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A44C7D18FC337400E9B254 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3A44C8018FC337400E9B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3A44C8118FC337400E9B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3A44C8318FC337400E9B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FEFramework/FEFramework-Prefix.pch";
+				INFOPLIST_FILE = "FEFramework/FEFramework-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		C3A44C8418FC337400E9B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FEFramework/FEFramework-Prefix.pch";
+				INFOPLIST_FILE = "FEFramework/FEFramework-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3A44C6B18FC337400E9B254 /* Build configuration list for PBXProject "FEFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A44C8018FC337400E9B254 /* Debug */,
+				C3A44C8118FC337400E9B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A44C8218FC337400E9B254 /* Build configuration list for PBXNativeTarget "FEFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A44C8318FC337400E9B254 /* Debug */,
+				C3A44C8418FC337400E9B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3A44C6818FC337400E9B254 /* Project object */;
+}

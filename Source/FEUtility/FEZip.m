@@ -889,7 +889,7 @@ int FEUnzOpenCurrentFile(FE_UnzFile file)
         pfile_in_zip_read_info->stream.next_in = (voidpf)0;
         pfile_in_zip_read_info->stream.avail_in = 0;
         
-        err=inflateInit2(&pfile_in_zip_read_info->stream, -MAX_WFETS);
+        err=inflateInit2(&pfile_in_zip_read_info->stream, -MAX_WBITS);
         if (err == Z_OK)
             pfile_in_zip_read_info->stream_initialised=1;
         else
