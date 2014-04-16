@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C35C342418FEC5B90062C334 /* FESidePanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = C35C342018FEC5B90062C334 /* FESidePanelController.h */; };
+		C35C342518FEC5B90062C334 /* FESidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35C342118FEC5B90062C334 /* FESidePanelController.m */; };
+		C35C342618FEC5B90062C334 /* FEViewTranslate.h in Headers */ = {isa = PBXBuildFile; fileRef = C35C342218FEC5B90062C334 /* FEViewTranslate.h */; };
+		C35C342718FEC5B90062C334 /* FEViewTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35C342318FEC5B90062C334 /* FEViewTranslate.m */; };
 		C3A44C7818FC337400E9B254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A44C7718FC337400E9B254 /* Foundation.framework */; };
 		C3A44C7E18FC337400E9B254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A44C7C18FC337400E9B254 /* InfoPlist.strings */; };
 		C3A44CC718FC33C100E9B254 /* NSArray+FEExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A44C8718FC33C000E9B254 /* NSArray+FEExtension.h */; };
@@ -73,6 +77,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C35C342018FEC5B90062C334 /* FESidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FESidePanelController.h; sourceTree = "<group>"; };
+		C35C342118FEC5B90062C334 /* FESidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FESidePanelController.m; sourceTree = "<group>"; };
+		C35C342218FEC5B90062C334 /* FEViewTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEViewTranslate.h; sourceTree = "<group>"; };
+		C35C342318FEC5B90062C334 /* FEViewTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEViewTranslate.m; sourceTree = "<group>"; };
 		C3A44C7418FC337400E9B254 /* FEFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = FEFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A44C7718FC337400E9B254 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3A44C7B18FC337400E9B254 /* FEFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FEFramework-Info.plist"; sourceTree = "<group>"; };
@@ -153,6 +161,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C35C341F18FEC5B90062C334 /* FESidePanel */ = {
+			isa = PBXGroup;
+			children = (
+				C35C342018FEC5B90062C334 /* FESidePanelController.h */,
+				C35C342118FEC5B90062C334 /* FESidePanelController.m */,
+				C35C342218FEC5B90062C334 /* FEViewTranslate.h */,
+				C35C342318FEC5B90062C334 /* FEViewTranslate.m */,
+			);
+			path = FESidePanel;
+			sourceTree = "<group>";
+		};
 		C3A44C6718FC337400E9B254 = {
 			isa = PBXGroup;
 			children = (
@@ -200,8 +219,9 @@
 		C3A44C8518FC33C000E9B254 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				C3A44C8618FC33C000E9B254 /* FECategory */,
 				C3A44CB018FC33C000E9B254 /* FEFramework.h */,
+				C35C341F18FEC5B90062C334 /* FESidePanel */,
+				C3A44C8618FC33C000E9B254 /* FECategory */,
 				C3A44CB118FC33C000E9B254 /* FEMacro */,
 				C3A44CB518FC33C100E9B254 /* FEUtility */,
 			);
@@ -319,6 +339,8 @@
 				C3A44CE918FC33C100E9B254 /* UIView+FECategory.h in Headers */,
 				C3A44CF918FC33C100E9B254 /* FEKeyframeEasingFunctions.h in Headers */,
 				C3A44CCF18FC33C100E9B254 /* NSObject+FEIvarAccess.h in Headers */,
+				C35C342418FEC5B90062C334 /* FESidePanelController.h in Headers */,
+				C35C342618FEC5B90062C334 /* FEViewTranslate.h in Headers */,
 				C3A44D0218FC33C100E9B254 /* FEZip.h in Headers */,
 				C3A44CE118FC33C100E9B254 /* UIScreen+FEFrame.h in Headers */,
 				C3A44CE718FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.h in Headers */,
@@ -464,8 +486,10 @@
 				C3A44CFB18FC33C100E9B254 /* FELocalStorageUtil.m in Sources */,
 				C3A44CFF18FC33C100E9B254 /* FEReachAbilityManager.m in Sources */,
 				C3A44CDC18FC33C100E9B254 /* UIDevice+FEExtension.m in Sources */,
+				C35C342518FEC5B90062C334 /* FESidePanelController.m in Sources */,
 				C3A44CD218FC33C100E9B254 /* NSObject+FENib.m in Sources */,
 				C3A44CCE18FC33C100E9B254 /* NSFileManager+FEExtension.m in Sources */,
+				C35C342718FEC5B90062C334 /* FEViewTranslate.m in Sources */,
 				C3A44CFD18FC33C100E9B254 /* FEReachability.m in Sources */,
 				C3A44CDE18FC33C100E9B254 /* UIDevice+FEProcess.m in Sources */,
 				C3A44CD618FC33C100E9B254 /* NSString+FEExtension.m in Sources */,
