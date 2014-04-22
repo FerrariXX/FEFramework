@@ -9,9 +9,12 @@
 #import "NSObject+FENib.h"
 
 @implementation NSObject (FENib)
++ (id)instanceWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner{
+    return [self instanceWithNibName:nibNameOrNil bundle:bundleOrNil owner:owner index:0];
+}
 
-+ (id)instanceWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner
-{
+
++ (id)instanceWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner index:(NSUInteger)index{
     //default values
     NSString *nibName = nibNameOrNil ?: NSStringFromClass(self);
     NSBundle *bundle = bundleOrNil ?: [NSBundle mainBundle];
@@ -24,22 +27,22 @@
     }
     NSString *pathKey = [NSString stringWithFormat:@"%@.%@", bundle.bundleIdentifier, nibName];
     UINib *nib = [nibCache objectForKey:pathKey];
-    if (nib == nil)
-    {
+    if (nib == nil){
         NSString *nibPath = [bundle pathForResource:nibName ofType:@"nib"];
         if (nibPath) nib = [UINib nibWithNibName:nibName bundle:bundle];
         [nibCache setObject:nib ?: [NSNull null] forKey:pathKey];
     }
-    else if ([nib isKindOfClass:[NSNull class]])
-    {
+    else if ([nib isKindOfClass:[NSNull class]]){
         nib = nil;
     }
     
-    if (nib)
-    {
+    if (nib){
         //attempt to load from nib
         NSArray *contents = [nib instantiateWithOwner:owner options:nil];
-        resultObj = [contents count]? [contents objectAtIndex:0]: nil;
+        resultObj = [contents count] >index? [contents objectAtIndex:index]: nil;
+    }else{
+        NSArray *objectArray = [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil];
+        resultObj = [objectArray count] >index? [objectArray objectAtIndex:index] : nil;
     }
     return resultObj;
 }
@@ -55,6 +58,9 @@
     
     if (cellNib) {
         NSArray *objectArray = [cellNib instantiateWithOwner:nil options:nil];
+        resultObj = [objectArray count] ? [objectArray objectAtIndex:0] : nil;
+    }else{
+        NSArray *objectArray = [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil];
         resultObj = [objectArray count] ? [objectArray objectAtIndex:0] : nil;
     }
     return resultObj;

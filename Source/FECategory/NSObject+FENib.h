@@ -10,5 +10,6 @@
 
 @interface NSObject (FENib)
 + (id)instanceWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner;
++ (id)instanceWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner index:(NSUInteger)index;
 + (id)instanceWithNibName1:(NSString *)nibNameOrNil bundle:(NSBundle *)bundleOrNil owner:(id)owner;
 @end

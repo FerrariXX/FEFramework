@@ -616,6 +616,8 @@ NSString * const FESidePanelControllerCenterDidDisappear    = @"FESidePanelContr
             //UIView *superView = (FESidePanelLeft == type) ? _leftContainer : _rightContainer;
             //[superView addSubview:self.tapMaskButton];
             //[superView bringSubviewToFront:self.tapMaskButton];
+            CGRect rect = (FESidePanelLeft == type) ? CGRectMake(kDefaultSidePanelVCWidth, 64, [UIScreen mainScreen].bounds.size.width - kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height) :  CGRectMake(0, 64, kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height);
+            [self.tapMaskButton setFrame:rect];
             [[UIApplication sharedApplication].keyWindow addSubview:self.tapMaskButton];
         }
     }
