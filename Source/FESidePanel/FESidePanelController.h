@@ -48,6 +48,7 @@ extern NSString * const FESidePanelControllerCenterDidDisappear;
 @property (nonatomic, readonly)UIView           *containerView;
 @property (nonatomic, readonly)UIView           *centerView;
 @property (nonatomic, readonly)FESidePanelType   visibleSide;
+@property (nonatomic, assign) BOOL              isEnableGesture;//是否允许滑动手势切换,默认不允许
 
 -(id)initWithCenterViewController:(UIViewController *)centerViewController leftViewController:(UIViewController *)leftViewController rightViewController:(UIViewController *)rightViewController;
 

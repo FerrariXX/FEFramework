@@ -247,9 +247,17 @@ NSString * const FESidePanelControllerCenterDidDisappear    = @"FESidePanelContr
 }
 
 - (void)showCenterPanelAnimated:(BOOL)animated{
+    [self sendDelegateAndNotification:FESidePanelCenterWillAppear];
     [self translateCenterWithType:FESidePanelCenter animated:^{} completion:^{
+        if ([self.centerPanel respondsToSelector:@selector(beginAppearanceTransition:animated:)]) {
+            [self.centerPanel beginAppearanceTransition:YES animated:NO];
+        }
         [self loadSidePanelWithType:FESidePanelCenter];
         _visibleSide = FESidePanelCenter;
+        if ([self.centerPanel respondsToSelector:@selector(endAppearanceTransition)]) {
+            [self.centerPanel endAppearanceTransition];
+        }
+        [self sendDelegateAndNotification:FESidePanelCenterDidAppear];
     }];
 }
 
@@ -478,9 +486,9 @@ NSString * const FESidePanelControllerCenterDidDisappear    = @"FESidePanelContr
 //    [_containerView addSubview:_rightContainer];
 //    [_containerView addSubview:_leftContainer];
 //    [_containerView addSubview:_centerContainer];
-    
-    //暂时不支持手势切换
-    [_containerView addGestureRecognizer:self.panGesture];
+    if (self.isEnableGesture) {
+        [_containerView addGestureRecognizer:self.panGesture];
+    }
     [self updateCenterContainerShadow:YES];
 }
 
@@ -490,7 +498,7 @@ NSString * const FESidePanelControllerCenterDidDisappear    = @"FESidePanelContr
         if (self.centerPanel && self.centerPanel.view.superview == nil){
             [self resetViewDefaultTransform:self.centerPanel.view];
             [self sendDelegateAndNotification:FESidePanelCenterWillAppear];
-            //[self addChildViewController:self.centerPanel];
+            [self addChildViewController:self.centerPanel];
             if ([self.centerPanel respondsToSelector:@selector(beginAppearanceTransition:animated:)]) {
                 [self.centerPanel beginAppearanceTransition:YES animated:NO];
             }
@@ -616,7 +624,7 @@ NSString * const FESidePanelControllerCenterDidDisappear    = @"FESidePanelContr
             //UIView *superView = (FESidePanelLeft == type) ? _leftContainer : _rightContainer;
             //[superView addSubview:self.tapMaskButton];
             //[superView bringSubviewToFront:self.tapMaskButton];
-            CGRect rect = (FESidePanelLeft == type) ? CGRectMake(kDefaultSidePanelVCWidth, 64, [UIScreen mainScreen].bounds.size.width - kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height) :  CGRectMake(0, 64, kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height);
+            CGRect rect = (FESidePanelLeft == type) ? CGRectMake(kDefaultSidePanelVCWidth, 64, [UIScreen mainScreen].bounds.size.width - kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height) :  CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width - kDefaultSidePanelVCWidth , [UIScreen mainScreen].bounds.size.height);
             [self.tapMaskButton setFrame:rect];
             [[UIApplication sharedApplication].keyWindow addSubview:self.tapMaskButton];
         }
