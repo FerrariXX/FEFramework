@@ -2,7 +2,7 @@
 //  FEReachAbilityManager.h.m
 //  Pumkin
 //
-//  Created by lv on 12-7-19.
+//  Created by xxx on 12-7-19.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 

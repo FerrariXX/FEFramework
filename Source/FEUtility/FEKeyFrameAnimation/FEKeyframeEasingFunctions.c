@@ -2,7 +2,7 @@
 //  FEKeyframeEasingFunctions.m
 //  FEKeyframeEasingFunctions
 //
-//  Created by lv on 13-9-29.
+//  Created by xxx on 13-9-29.
 //  Copyright (c) 2013年 Ferrari. All rights reserved.
 //
 

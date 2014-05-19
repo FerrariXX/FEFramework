@@ -2,7 +2,7 @@
 //  NSString+FEExtension.h
 //  FETestCategory
 //
-//  Created by lv on 13-9-16.
+//  Created by xxx on 13-9-16.
 //  Copyright (c) 2013年 Ferrari. All rights reserved.
 //
 

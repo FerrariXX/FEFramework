@@ -2,13 +2,13 @@
 //  FEKeyframeEasingFunctions.h
 //  FEKeyframeEasingFunctions
 //
-//  Created by lv on 13-9-29.
+//  Created by xxx on 13-9-29.
 //  Copyright (c) 2013年 Ferrari. All rights reserved.
 //
 
 #pragma mark - 
 /*
-    lv
+    xxx
      - (NSArray *)generateValuesFrom:(double)startValue to:(double)endValue
      {
      NSUInteger steps = (NSUInteger)ceil(kFPS * self.duration) + 2;

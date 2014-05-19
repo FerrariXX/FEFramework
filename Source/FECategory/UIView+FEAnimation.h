@@ -2,7 +2,7 @@
 //  UIView+FEAnimation.h
 //  FETestCategory
 //
-//  Created by lv on 13-9-11.
+//  Created by xxx on 13-9-11.
 //  Copyright (c) 2013年 Ferrari. All rights reserved.
 //
 //https://github.com/inamiy/ViewUtils

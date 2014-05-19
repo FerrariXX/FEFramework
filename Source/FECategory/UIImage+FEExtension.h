@@ -2,7 +2,7 @@
 //  UIImage+FEExtension.h
 //  FETestCategory
 //
-//  Created by lv on 13-9-17.
+//  Created by xxx on 13-9-17.
 //  Copyright (c) 2013年 Ferrari. All rights reserved.
 //
 
