@@ -9,6 +9,12 @@
 #import "FEScrollPageView.h"
 #import "UIImageView+WebCache.h"
 
+@interface FEImageItem()
+@property (nonatomic, retain)  NSString      *title;
+@property (nonatomic, retain)  NSString      *imageURL;
+@property (nonatomic, assign)  NSInteger     tag;
+@end
+
 @implementation FEImageItem
 - (instancetype)initWithTitle:(NSString *)title imageURL:(NSString *)imageURL tag:(NSInteger)tag{
     self = [super init];
@@ -86,8 +92,10 @@
     self.scrollView.alwaysBounceVertical = NO;
     //init image items
     NSInteger originX = 0 ;
-    for (FEImageItem *imageItem in self.imageItems){
-        if ([imageItem isKindOfClass:[FEImageItem class]]) {
+    //for (FEImageItem *imageItem in self.imageItems){
+    //    if ([imageItem isKindOfClass:[FEImageItem class]]) {
+    for (id<FEImageItemProtocol> imageItem in self.imageItems){
+        if ([imageItem conformsToProtocol:@protocol(FEImageItemProtocol)]) {
             UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
             imageView.frame = CGRectMake(originX, 0, self.frame.size.width, self.frame.size.height);
             if (imageItem.imageURL) {

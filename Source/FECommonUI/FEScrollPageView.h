@@ -11,10 +11,16 @@
 @class FEImageItem;
 typedef void(^FEScrollPageSelectedBlock)(FEImageItem* sender);
 
-@interface FEImageItem : NSObject
-@property (nonatomic, retain)  NSString      *title;
-@property (nonatomic, retain)  NSString      *imageURL;
-@property (nonatomic, assign)  NSInteger     tag;
+@protocol FEImageItemProtocol <NSObject>
+- (NSString*)title;
+- (NSString*)imageURL;
+- (NSInteger)tag;
+@end
+
+@interface FEImageItem : NSObject <FEImageItemProtocol>
+//@property (nonatomic, retain)  NSString      *title;
+//@property (nonatomic, retain)  NSString      *imageURL;
+//@property (nonatomic, assign)  NSInteger     tag;
 
 - (instancetype)initWithTitle:(NSString *)title imageURL:(NSString *)imageURL tag:(NSInteger)tag;
 @end
