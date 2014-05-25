@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30582E919320DB200DE14E5 /* FEMicroMsgPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */; };
+		C30582EA19320DB200DE14E5 /* FEMicroMsgPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30582E419320DB200DE14E5 /* FEMicroMsgPopoverView.m */; };
+		C30582EB19320DB200DE14E5 /* FEScrollPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E519320DB200DE14E5 /* FEScrollPageView.h */; };
+		C30582EC19320DB200DE14E5 /* FEScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30582E619320DB200DE14E5 /* FEScrollPageView.m */; };
+		C30582ED19320DB200DE14E5 /* UIScrollView+FECover.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E719320DB200DE14E5 /* UIScrollView+FECover.h */; };
+		C30582EE19320DB200DE14E5 /* UIScrollView+FECover.m in Sources */ = {isa = PBXBuildFile; fileRef = C30582E819320DB200DE14E5 /* UIScrollView+FECover.m */; };
 		C35C342418FEC5B90062C334 /* FESidePanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = C35C342018FEC5B90062C334 /* FESidePanelController.h */; };
 		C35C342518FEC5B90062C334 /* FESidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35C342118FEC5B90062C334 /* FESidePanelController.m */; };
 		C35C342618FEC5B90062C334 /* FEViewTranslate.h in Headers */ = {isa = PBXBuildFile; fileRef = C35C342218FEC5B90062C334 /* FEViewTranslate.h */; };
@@ -77,6 +83,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMicroMsgPopoverView.h; sourceTree = "<group>"; };
+		C30582E419320DB200DE14E5 /* FEMicroMsgPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMicroMsgPopoverView.m; sourceTree = "<group>"; };
+		C30582E519320DB200DE14E5 /* FEScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEScrollPageView.h; sourceTree = "<group>"; };
+		C30582E619320DB200DE14E5 /* FEScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEScrollPageView.m; sourceTree = "<group>"; };
+		C30582E719320DB200DE14E5 /* UIScrollView+FECover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FECover.h"; sourceTree = "<group>"; };
+		C30582E819320DB200DE14E5 /* UIScrollView+FECover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FECover.m"; sourceTree = "<group>"; };
 		C35C342018FEC5B90062C334 /* FESidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FESidePanelController.h; sourceTree = "<group>"; };
 		C35C342118FEC5B90062C334 /* FESidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FESidePanelController.m; sourceTree = "<group>"; };
 		C35C342218FEC5B90062C334 /* FEViewTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEViewTranslate.h; sourceTree = "<group>"; };
@@ -161,6 +173,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C30582E219320DB200DE14E5 /* FECommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */,
+				C30582E419320DB200DE14E5 /* FEMicroMsgPopoverView.m */,
+				C30582E519320DB200DE14E5 /* FEScrollPageView.h */,
+				C30582E619320DB200DE14E5 /* FEScrollPageView.m */,
+				C30582E719320DB200DE14E5 /* UIScrollView+FECover.h */,
+				C30582E819320DB200DE14E5 /* UIScrollView+FECover.m */,
+			);
+			path = FECommonUI;
+			sourceTree = "<group>";
+		};
 		C35C341F18FEC5B90062C334 /* FESidePanel */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A44CB018FC33C000E9B254 /* FEFramework.h */,
+				C30582E219320DB200DE14E5 /* FECommonUI */,
 				C35C341F18FEC5B90062C334 /* FESidePanel */,
 				C3A44C8618FC33C000E9B254 /* FECategory */,
 				C3A44CB118FC33C000E9B254 /* FEMacro */,
@@ -337,13 +363,16 @@
 				C3A44CDD18FC33C100E9B254 /* UIDevice+FEProcess.h in Headers */,
 				C3A44CF218FC33C100E9B254 /* FEEnumToString.h in Headers */,
 				C3A44CE918FC33C100E9B254 /* UIView+FECategory.h in Headers */,
+				C30582ED19320DB200DE14E5 /* UIScrollView+FECover.h in Headers */,
 				C3A44CF918FC33C100E9B254 /* FEKeyframeEasingFunctions.h in Headers */,
 				C3A44CCF18FC33C100E9B254 /* NSObject+FEIvarAccess.h in Headers */,
 				C35C342418FEC5B90062C334 /* FESidePanelController.h in Headers */,
 				C35C342618FEC5B90062C334 /* FEViewTranslate.h in Headers */,
 				C3A44D0218FC33C100E9B254 /* FEZip.h in Headers */,
 				C3A44CE118FC33C100E9B254 /* UIScreen+FEFrame.h in Headers */,
+				C30582E919320DB200DE14E5 /* FEMicroMsgPopoverView.h in Headers */,
 				C3A44CE718FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.h in Headers */,
+				C30582EB19320DB200DE14E5 /* FEScrollPageView.h in Headers */,
 				C3A44CCB18FC33C100E9B254 /* NSDictionary+FEExtension.h in Headers */,
 				C3A44CFE18FC33C100E9B254 /* FEReachAbilityManager.h in Headers */,
 				C3A44CE518FC33C100E9B254 /* UIView+FEAnimation.h in Headers */,
@@ -475,6 +504,7 @@
 			files = (
 				C3A44CD818FC33C100E9B254 /* UIButton+FEExtension.m in Sources */,
 				C3A44CC818FC33C100E9B254 /* NSArray+FEExtension.m in Sources */,
+				C30582EA19320DB200DE14E5 /* FEMicroMsgPopoverView.m in Sources */,
 				C3A44D0118FC33C100E9B254 /* FEUtil.m in Sources */,
 				C3A44CD018FC33C100E9B254 /* NSObject+FEIvarAccess.m in Sources */,
 				C3A44CF818FC33C100E9B254 /* FEKeyframeEasingFunctions.c in Sources */,
@@ -484,6 +514,7 @@
 				C3A44D0318FC33C100E9B254 /* FEZip.m in Sources */,
 				C3A44CE018FC33C100E9B254 /* UIImage+FEExtension.m in Sources */,
 				C3A44CFB18FC33C100E9B254 /* FELocalStorageUtil.m in Sources */,
+				C30582EE19320DB200DE14E5 /* UIScrollView+FECover.m in Sources */,
 				C3A44CFF18FC33C100E9B254 /* FEReachAbilityManager.m in Sources */,
 				C3A44CDC18FC33C100E9B254 /* UIDevice+FEExtension.m in Sources */,
 				C35C342518FEC5B90062C334 /* FESidePanelController.m in Sources */,
@@ -503,6 +534,7 @@
 				C3A44CE618FC33C100E9B254 /* UIView+FEAnimation.m in Sources */,
 				C3A44CED18FC33C100E9B254 /* UIView+FEHierarchy.m in Sources */,
 				C3A44CCA18FC33C100E9B254 /* NSDate+FEExtension.m in Sources */,
+				C30582EC19320DB200DE14E5 /* FEScrollPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
