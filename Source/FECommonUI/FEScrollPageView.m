@@ -36,6 +36,8 @@
 @property(nonatomic, assign)CGPoint  startPoint;
 @property(nonatomic, assign)CGFloat  directionOffset;
 @property(nonatomic, assign)BOOL     isInvalidate;
+@property(nonatomic, assign)UIEdgeInsets edgeInsets;
+@property(nonatomic, strong)UITapGestureRecognizer *tapGesture;
 @end
 
 @implementation FEScrollPageView
@@ -46,6 +48,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.edgeInsets = UIEdgeInsetsMake(0, 3, 0, 3);
+        _itemWidth= [[UIScreen mainScreen] bounds].size.width;
+        self.isHiddenPageController = NO;
         self.imageItems    = items;
         self.selectedBlock = selectedBlock;
         self.isAutoPlay = isAutoPlay;
@@ -54,6 +59,7 @@
         self.pageControl.userInteractionEnabled = NO;
         self.pageControl.numberOfPages = [self.imageItems count];
         self.pageControl.currentPage = 0;
+        self.pageControl.hidden = self.isHiddenPageController;
         [self addSubview:self.scrollView];
         [self addSubview:self.pageControl];
         [self scrollviewInit];
@@ -64,6 +70,9 @@
 - (void)setImageItems:(NSArray*)items
         selectedBlock:(FEScrollPageSelectedBlock)selectedBlock
            isAutoPlay:(BOOL)isAutoPlay{
+    self.edgeInsets = UIEdgeInsetsMake(0, 3, 0, 3);
+    _itemWidth =  [[UIScreen mainScreen] bounds].size.width;
+    self.isHiddenPageController = NO;
     self.imageItems    = items;
     self.selectedBlock = selectedBlock;
     self.isAutoPlay = isAutoPlay;
@@ -72,6 +81,7 @@
     self.pageControl.userInteractionEnabled = NO;
     self.pageControl.numberOfPages = [self.imageItems count];
     self.pageControl.currentPage = 0;
+    self.pageControl.userInteractionEnabled = NO;
     [self addSubview:self.scrollView];
     [self addSubview:self.pageControl];
     [self scrollviewInit];
@@ -82,12 +92,46 @@
     self.timer = nil;
 }
 
+- (UITapGestureRecognizer *)tapGesture
+{
+    if (_tapGesture == nil) {
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+        [_tapGesture setNumberOfTapsRequired:1];
+    }
+    return _tapGesture;
+}
+
+- (void)setItemWidth:(NSInteger)itemWidth{
+    if (_itemWidth != itemWidth) {
+        _itemWidth = itemWidth;
+        [self scrollviewInit];
+    }
+}
+
+- (void)setIsHiddenPageController:(BOOL)isHiddenPageController{
+    if (_isHiddenPageController != isHiddenPageController) {
+        self.pageControl.hidden = _isHiddenPageController;
+    }
+}
+    
 #pragma mark - Private Method
 - (void)scrollviewInit{
+    if (self.scrollView == nil) {
+        return;
+    }
+    //reset state
+    [[self.scrollView subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UIView class]]) {
+            [obj removeFromSuperview];
+        }
+    }];
+
+    [self.scrollView removeGestureRecognizer:self.tapGesture];
+    
     //create scrollView
-    self.scrollView.contentSize = CGSizeMake(self.frame.size.width * [self.imageItems count], self.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.itemWidth * [self.imageItems count], self.frame.size.height);
     self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.pagingEnabled = YES;
+    self.scrollView.pagingEnabled = (self.itemWidth == [UIScreen mainScreen].bounds.size.width);
     self.scrollView.delegate = self;
     self.scrollView.alwaysBounceVertical = NO;
     //init image items
@@ -97,12 +141,12 @@
     for (id<FEImageItemProtocol> imageItem in self.imageItems){
         if ([imageItem conformsToProtocol:@protocol(FEImageItemProtocol)]) {
             UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-            imageView.frame = CGRectMake(originX, 0, self.frame.size.width, self.frame.size.height);
+            imageView.frame = CGRectMake(originX + self.edgeInsets.left, 0, self.itemWidth - self.edgeInsets.left - self.edgeInsets.right, self.frame.size.height);
             if (imageItem.imageURL) {
                 [imageView setImageWithURL:[NSURL URLWithString:imageItem.imageURL] placeholderImage:nil];
             }
             [self.scrollView addSubview:imageView];
-            originX += imageView.frame.size.width;
+            originX += self.itemWidth;
             imageView.backgroundColor = [UIColor clearColor];//originX/imageView.frame.size.width ?  [UIColor blueColor] : [UIColor orangeColor];
         }else {
             NSLog(@">>>Error:FEScrollPageView.imageItems is not kind of class FEImageItem.");
@@ -112,13 +156,18 @@
     [self updateAutoPlayTimer];
     
     //tap gestrue
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    [singleTap setNumberOfTapsRequired:1];
-    [self.scrollView addGestureRecognizer:singleTap];
+    [self.scrollView addGestureRecognizer:self.tapGesture];
+    
+    //width
+    if (_itemWidth != [[UIScreen mainScreen] bounds].size.width) {
+        [self.pageControl removeFromSuperview];
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
 - (void)updateAutoPlayTimer{
-    if (self.isAutoPlay) {
+    if (self.isAutoPlay && self.itemWidth == [UIScreen mainScreen].bounds.size.width) {
         [self.timer invalidate];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(autoSwitchToNextPage) userInfo:nil repeats:YES];
     }
@@ -126,12 +175,12 @@
 
 - (void)autoSwitchToNextPage{
     if (!self.scrollView.isDragging && !self.scrollView.isDecelerating){
-        NSInteger targetX  = self.scrollView.contentOffset.x + self.scrollView.frame.size.width;
+        NSInteger targetX  = self.scrollView.contentOffset.x + self.itemWidth;//self.scrollView.frame.size.width;
         NSInteger maxWidth = (NSInteger)roundf(self.scrollView.contentSize.width);
-        maxWidth = maxWidth == 0 ? 1 : maxWidth;
+       // maxWidth = maxWidth == 0 ? 1 : maxWidth;
         targetX = targetX % maxWidth;
         [self.scrollView setContentOffset:CGPointMake(targetX, self.scrollView.contentOffset.y) animated:YES];
-        NSInteger index  = floor(targetX / self.bounds.size.width) ;
+        NSInteger index  = floor(targetX / self.itemWidth/*self.bounds.size.width*/) ;
         self.pageControl.currentPage = index;
     }
 }
@@ -151,8 +200,8 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSLog(@">>>%@",NSStringFromCGPoint(scrollView.contentOffset));
     CGFloat targetX = scrollView.contentOffset.x;
-    if (targetX >=0 && targetX <= (scrollView.contentSize.width - self.bounds.size.width) ) {
-        NSInteger index  = floor(targetX / self.bounds.size.width) ;
+    if (targetX >=0 && targetX <= (scrollView.contentSize.width - self.itemWidth/*self.bounds.size.width*/) ) {
+        NSInteger index  = floor(targetX / self.itemWidth/*self.bounds.size.width*/) ;
         self.pageControl.currentPage = index;
     }
     
@@ -212,7 +261,7 @@
 
 - (void) handleSingleTap:(UITapGestureRecognizer *) gestureRecognizer
 {
-	CGFloat pageWith = self.frame.size.width;
+	CGFloat pageWith = self.itemWidth;//self.frame.size.width;
     CGPoint location = [gestureRecognizer locationInView:self.scrollView];
     NSInteger touchIndex = floor(location.x / pageWith) ;
     NSLog(@">>>FEScrollPageView touch index %d",touchIndex);

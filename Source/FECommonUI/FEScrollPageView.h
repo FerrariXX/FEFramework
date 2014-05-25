@@ -28,6 +28,8 @@ typedef void(^FEScrollPageSelectedBlock)(FEImageItem* sender);
 @interface FEScrollPageView : UIView
 @property(nonatomic, assign)BOOL                    isAutoPlay;
 @property(nonatomic, copy)FEScrollPageSelectedBlock selectedBlock;
+@property(nonatomic, assign)NSInteger               itemWidth;//default screen.width
+@property(nonatomic, assign)BOOL                    isHiddenPageController;//default NO
 
 - (instancetype)initWithFrame:(CGRect)frame
                    imageItems:(NSArray*)items
