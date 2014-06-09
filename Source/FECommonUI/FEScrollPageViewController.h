@@ -32,6 +32,7 @@
 @interface FEScrollPageViewController : UIViewController
 @property(nonatomic, weak) id<FEScrollPageViewControllerDataSource> dataSource;
 @property(nonatomic, weak) id<FEScrollPageViewControllerDelegate> delegate;
-
+@property(nonatomic, assign)NSInteger  tabHeight;     //default 44
+@property(nonatomic, assign)NSInteger  tabItemWidth;  //default 100
 - (void)reloadData;
 @end

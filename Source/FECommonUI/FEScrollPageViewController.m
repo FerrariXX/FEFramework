@@ -18,10 +18,6 @@
 @property(nonatomic, strong)NSMutableDictionary *contents;
 
 @property(nonatomic, assign)NSUInteger sectionCount;
-
-
-@property(nonatomic, assign)NSInteger  tabHeight;
-@property(nonatomic, assign)NSInteger  tabItemWidth;
 @property(nonatomic, strong)NSMutableArray *currentIndex;
 
 @property(nonatomic, strong)UISwipeGestureRecognizer    *rightSwipeGestureRecognizer;
@@ -48,11 +44,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    }
+    if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
+        [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    }
     
     [self.view addSubview:self.tabView];
     [self.view addSubview:self.contentView];
     
-    [self reloadData];
+    //[self reloadData];
     // Do any additional setup after loading the view.
 }
 
@@ -106,7 +108,7 @@
     for (NSUInteger section = 0 ; section < self.sectionCount; section++) {
         //add section scrollview
         UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, section*self.tabHeight, self.view.frame.size.width, self.tabHeight)];
-        scrollView.backgroundColor = section %2 ? [[UIColor orangeColor] colorWithAlphaComponent:0.3] : [[UIColor blueColor] colorWithAlphaComponent:0.3];
+        scrollView.backgroundColor = [UIColor whiteColor];//section %2 ? [[UIColor orangeColor] colorWithAlphaComponent:0.3] : [[UIColor blueColor] colorWithAlphaComponent:0.3];
         scrollView.showsHorizontalScrollIndicator = NO;
         scrollView.showsVerticalScrollIndicator   = NO;
         scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -230,6 +232,7 @@
     UIViewController *toVC   = [self viewControllerWithIndexPath:toIndexPath];
     UIView *fromWrapperView = nil;
     
+    //NSLog(@">>>fromVC[%@] toView[%@]",fromVC.view,toVC.view);
     if (fromVC && toVC && (fromVC != toVC)){
         [self.contentView insertSubview:toVC.view belowSubview:fromVC.view];
         fromWrapperView = fromVC.view;
@@ -264,6 +267,11 @@
                         [fromWrapperView removeFromSuperview];
                         [self.contentView addSubview:toVC.view];
                         [self.delegate viewPage:self didChangeTabToSection:toIndexPath.section index:toIndexPath.row contentVC:toVC];
+                        
+                        //Reset contentOffset when scrollview
+                        if ([fromVC.view isKindOfClass:[UIScrollView class]]) {
+                            ((UIScrollView*)fromVC.view).contentOffset = CGPointZero;
+                        }
                     }];
 
     //tab view transition
@@ -284,6 +292,8 @@
         //[scrollView scrollRectToVisible:CGRectMake(roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0), 0, self.tabItemWidth, self.tabHeight) animated:YES];
         
     }
+    [fromVC removeFromParentViewController];
+    [self addChildViewController:toVC];
 
 }
 
@@ -294,6 +304,10 @@
     NSInteger section = point.y / self.tabHeight;
     point = [tapGestureRecognizer locationInView:[[self.tabView subviews] objectAtIndex:section]];
     NSInteger index   = point.x  / self.tabItemWidth;
+    
+    NSInteger maxCount = [[self.tabsDict objectForKey:[NSNumber numberWithInteger:section]] count];
+    index = index < 0 ? 0 : index;
+    index = index >= maxCount ? maxCount -1 : index;
     NSLog(@">>>tap in [sec=%d index=%d]",section,index);
     [self setCurrentSelectedIndexPath:[NSIndexPath indexPathForRow:index inSection:section]];
 
