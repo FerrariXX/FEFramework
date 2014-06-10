@@ -165,6 +165,7 @@
         NSArray *contentArray = [self.contents objectForKey:[NSNumber numberWithInteger:0]];
         UIViewController *vc0 = [contentArray objectAtIndex:0];
         [self.contentView addSubview:vc0.view];
+        [self addChildViewController:vc0];//first set
     }
     
     //Default Selected index
