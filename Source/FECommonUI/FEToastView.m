@@ -76,6 +76,36 @@ static const CGFloat width_ = 100.0;
 */
 #pragma mark - Public Method
 
++ (void)showWithTitle:(NSString*)title animation:(BOOL)animation interval:(CGFloat)interval{
+	
+    [self dismissWithAnimation:NO];
+    
+    toastView = [[FEToastView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+	
+	[toastView addTitleLabel:title];
+	//[toastView addActivityIndicatorView];
+	[toastView layout];
+	
+	toastView.alpha = 0.0f;
+	UIWindow* keyWindow = [[UIApplication sharedApplication] keyWindow];
+    keyWindow = keyWindow == nil ? [[[[UIApplication sharedApplication] delegate] window] rootViewController].view : keyWindow;
+	[keyWindow addSubview:toastView];
+	if (animation) {
+		toastView.alpha = 0.0;
+		[UIView animateWithDuration:0.3 animations:^{[toastView.activityView startAnimating];toastView.alpha=1.0;}];
+	}
+	else{
+		toastView.alpha = 1.0;
+	}
+ 
+    
+    __weak __typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(interval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf dismissWithAnimation:YES];
+    });
+}
+
 + (void)showWithTitle:(NSString*)title animation:(BOOL)animation
 {
 
@@ -92,13 +122,11 @@ static const CGFloat width_ = 100.0;
 	UIWindow* keyWindow = [[UIApplication sharedApplication] keyWindow];
     keyWindow = keyWindow == nil ? [[[[UIApplication sharedApplication] delegate] window] rootViewController].view : keyWindow;
 	[keyWindow addSubview:toastView];
-	if (animation) 
-	{
+	if (animation) {
 		toastView.alpha = 0.0;
 		[UIView animateWithDuration:0.3 animations:^{[toastView.activityView startAnimating];toastView.alpha=1.0;}]; 
 	}
-	else
-	{
+	else{
 		toastView.alpha = 1.0;
 		[toastView.activityView startAnimating];
 	}
@@ -116,6 +144,7 @@ static const CGFloat width_ = 100.0;
 	{
 		[toastView.activityView stopAnimating];
 		[toastView removeFromSuperview];
+        toastView = nil;
 	}
 }
 
@@ -189,6 +218,19 @@ static const CGFloat width_ = 100.0;
 	
 }
 
+- (void)layoutOnlyTextLabel
+{
+    CGSize titleSize    = [self titleLabelSize];
+    CGFloat max = MAX(titleSize.width, titleSize.height) + 10;
+	CGFloat originX = (kScreenWidth-max)/2;
+	CGFloat originY = (kScreenHeight-max)/2;
+    
+    CGRect rect = CGRectMake(originX, originY, max, max);
+    [titleLabel_        setFrame:CGRectMake(0, 0, max, max)];
+    [backGroundView_	setFrame:rect];
+
+}
+
 - (void)layoutTitleAndActivity
 {
 	CGSize titleSize    = [self titleLabelSize];
@@ -223,7 +265,10 @@ static const CGFloat width_ = 100.0;
 	if (titleLabel_.text==nil || [titleLabel_.text isEqualToString:@""]){
 		[self layoutOnlyActivity];
 	}
-	else{
+	else if (activityView_.superview == nil){
+        [self layoutOnlyTextLabel];
+    }
+    else{
 		[self layoutTitleAndActivity];
 	}
 

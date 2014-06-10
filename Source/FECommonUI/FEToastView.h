@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FEToastView : UIView
++ (void)showWithTitle:(NSString*)title animation:(BOOL)animation interval:(CGFloat)interval;
 + (void)showWithTitle:(NSString*)title animation:(BOOL)animation;
 + (void)dismissWithAnimation:(BOOL)animation;
 @end
