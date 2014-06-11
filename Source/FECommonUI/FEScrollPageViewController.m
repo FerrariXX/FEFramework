@@ -23,6 +23,8 @@
 @property(nonatomic, strong)UISwipeGestureRecognizer    *rightSwipeGestureRecognizer;
 @property(nonatomic, strong)UISwipeGestureRecognizer    *leftSwipeGestureRecognizer;
 @property(nonatomic, assign)BOOL isSingletonContentVC;
+
+@property(nonatomic, strong)UIViewController *currentViewController;
 @end
 
 @implementation FEScrollPageViewController
@@ -166,6 +168,7 @@
         UIViewController *vc0 = [contentArray objectAtIndex:0];
         [self.contentView addSubview:vc0.view];
         [self addChildViewController:vc0];//first set
+        self.currentViewController = vc0;
     }
     
     //Default Selected index
@@ -295,7 +298,12 @@
     }
     [fromVC removeFromParentViewController];
     [self addChildViewController:toVC];
+    self.currentViewController = toVC;
 
+}
+
+- (UIViewController *)visibleViewController{
+    return self.currentViewController;
 }
 
 #pragma mark - handleTapGesture
