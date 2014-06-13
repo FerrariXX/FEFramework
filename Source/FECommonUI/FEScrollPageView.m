@@ -177,7 +177,7 @@
     if (!self.scrollView.isDragging && !self.scrollView.isDecelerating){
         NSInteger targetX  = self.scrollView.contentOffset.x + self.itemWidth;//self.scrollView.frame.size.width;
         NSInteger maxWidth = (NSInteger)roundf(self.scrollView.contentSize.width);
-       // maxWidth = maxWidth == 0 ? 1 : maxWidth;
+        maxWidth = maxWidth == 0 ? 1 : maxWidth;
         targetX = targetX % maxWidth;
         [self.scrollView setContentOffset:CGPointMake(targetX, self.scrollView.contentOffset.y) animated:YES];
         NSInteger index  = floor(targetX / self.itemWidth/*self.bounds.size.width*/) ;
