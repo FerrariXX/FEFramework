@@ -152,6 +152,14 @@
             NSLog(@">>>Error:FEScrollPageView.imageItems is not kind of class FEImageItem.");
         }
     }
+    
+    //set default image when none image
+    if ([self.imageItems count] == 0 && [self.palceHoldImage length] > 0) {
+        UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        imageView.frame = CGRectMake(originX + self.edgeInsets.left, 0, self.itemWidth - self.edgeInsets.left - self.edgeInsets.right, self.frame.size.height);
+        [imageView setImage:[UIImage imageNamed:self.palceHoldImage]];
+        [self.scrollView addSubview:imageView];
+    }
     //auto play
     [self updateAutoPlayTimer];
     

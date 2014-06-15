@@ -30,7 +30,7 @@ typedef void(^FEScrollPageSelectedBlock)(FEImageItem* sender);
 @property(nonatomic, copy)FEScrollPageSelectedBlock selectedBlock;
 @property(nonatomic, assign)NSInteger               itemWidth;//default screen.width
 @property(nonatomic, assign)BOOL                    isHiddenPageController;//default NO
-
+@property(nonatomic, strong)NSString                *palceHoldImage;
 - (instancetype)initWithFrame:(CGRect)frame
                    imageItems:(NSArray*)items
                 selectedBlock:(FEScrollPageSelectedBlock)selectedBlock

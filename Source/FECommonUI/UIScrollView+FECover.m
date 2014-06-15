@@ -152,6 +152,10 @@ static char FEUIScrollViewCoverViewKey;
     return self;
 }
 
+- (void)dealloc{
+    [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
+    _scrollView = nil;
+}
 - (void)setImage:(UIImage *)image
 {
     [super setImage:image];
@@ -180,7 +184,6 @@ static char FEUIScrollViewCoverViewKey;
 
 - (void)removeFromSuperview
 {
-    [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
     [_topView   removeFromSuperview];
     [_aboveView removeFromSuperview];
     [super removeFromSuperview];
@@ -236,6 +239,7 @@ static char FEUIScrollViewCoverViewKey;
 @interface UIScrollView (FECoverPrivate)
 @property(nonatomic,weak)FECoverView *coverView;
 @end
+
 @implementation UIScrollView (FECover)
 - (void)setCoverView:(FECoverView *)coverView {
     [self willChangeValueForKey:@"FECoverView"];
