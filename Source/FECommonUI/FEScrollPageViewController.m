@@ -159,7 +159,7 @@
             [scrollView addSubview:tabView];
             tabSizeWidth += self.tabItemWidth;
         }
-        scrollView.contentSize = CGSizeMake(tabSizeWidth, self.tabHeight);
+        scrollView.contentSize = CGSizeMake(MAX(tabSizeWidth, [UIScreen mainScreen].bounds.size.width +20), self.tabHeight);
         [self.tabView addSubview:scrollView];
     }
     
@@ -289,12 +289,15 @@
         } completion:^(BOOL finished) {
         }];
         
-        //UIScrollView *scrollView = [self.tabsViews objectAtIndex:fromIndexPath.section];
-        CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
-        offsetX  = offsetX < 0 ? 0.0 : offsetX;
-        [scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
-        //[scrollView scrollRectToVisible:CGRectMake(roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0), 0, self.tabItemWidth, self.tabHeight) animated:YES];
-        
+       //tab个数小时不做滚动
+       NSInteger count =  [[UIScreen mainScreen] bounds].size.width /self.tabItemWidth;
+        if ([self.tabsDict count] > count) {
+            //UIScrollView *scrollView = [self.tabsViews objectAtIndex:fromIndexPath.section];
+            CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
+            offsetX  = offsetX < 0 ? 0.0 : offsetX;
+            [scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+            //[scrollView scrollRectToVisible:CGRectMake(roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0), 0, self.tabItemWidth, self.tabHeight) animated:YES];
+        }
     }
     [fromVC removeFromParentViewController];
     [self addChildViewController:toVC];

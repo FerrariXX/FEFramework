@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F5967D195FC0D100827C01 /* FEToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F5967B195FC0D100827C01 /* FEToastView.h */; };
+		84F5967E195FC0D100827C01 /* FEToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F5967C195FC0D100827C01 /* FEToastView.m */; };
 		C30582E919320DB200DE14E5 /* FEMicroMsgPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */; };
 		C30582EA19320DB200DE14E5 /* FEMicroMsgPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30582E419320DB200DE14E5 /* FEMicroMsgPopoverView.m */; };
 		C30582EB19320DB200DE14E5 /* FEScrollPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E519320DB200DE14E5 /* FEScrollPageView.h */; };
@@ -85,6 +87,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84F5967B195FC0D100827C01 /* FEToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEToastView.h; sourceTree = "<group>"; };
+		84F5967C195FC0D100827C01 /* FEToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEToastView.m; sourceTree = "<group>"; };
 		C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMicroMsgPopoverView.h; sourceTree = "<group>"; };
 		C30582E419320DB200DE14E5 /* FEMicroMsgPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMicroMsgPopoverView.m; sourceTree = "<group>"; };
 		C30582E519320DB200DE14E5 /* FEScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEScrollPageView.h; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 		C30582E219320DB200DE14E5 /* FECommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				84F5967B195FC0D100827C01 /* FEToastView.h */,
+				84F5967C195FC0D100827C01 /* FEToastView.m */,
 				C3094A90193B639100BDE4A9 /* FEScrollPageViewController.h */,
 				C3094A91193B639100BDE4A9 /* FEScrollPageViewController.m */,
 				C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */,
@@ -378,6 +384,7 @@
 				C3A44D0218FC33C100E9B254 /* FEZip.h in Headers */,
 				C3A44CE118FC33C100E9B254 /* UIScreen+FEFrame.h in Headers */,
 				C30582E919320DB200DE14E5 /* FEMicroMsgPopoverView.h in Headers */,
+				84F5967D195FC0D100827C01 /* FEToastView.h in Headers */,
 				C3A44CE718FC33C100E9B254 /* UIView+FEAutoResizeKeyboard.h in Headers */,
 				C30582EB19320DB200DE14E5 /* FEScrollPageView.h in Headers */,
 				C3A44CCB18FC33C100E9B254 /* NSDictionary+FEExtension.h in Headers */,
@@ -509,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F5967E195FC0D100827C01 /* FEToastView.m in Sources */,
 				C3A44CD818FC33C100E9B254 /* UIButton+FEExtension.m in Sources */,
 				C3094A93193B639100BDE4A9 /* FEScrollPageViewController.m in Sources */,
 				C3A44CC818FC33C100E9B254 /* NSArray+FEExtension.m in Sources */,
