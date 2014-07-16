@@ -98,6 +98,9 @@
     [self.tabsViews removeAllObjects];
     [self.tabsDict  removeAllObjects];
     [self.contents  removeAllObjects];
+    UIView *subView = [[self.tabView subviews] count] >0 ? [[self.tabView subviews] objectAtIndex:0] : nil;
+    [subView removeFromSuperview];
+    subView = nil;
     
     self.sectionCount = [self.dataSource numberOfSections];
     self.isSingletonContentVC = self.sectionCount > 1;
