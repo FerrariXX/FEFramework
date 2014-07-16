@@ -189,7 +189,8 @@
     //update selected index
     for (NSInteger index = 0; index < [self.currentIndex count]; index ++ ) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[[self.currentIndex objectAtIndex:index] integerValue] inSection:index];
-        [self setCurrentSelectedIndexPath:indexPath];
+        [self transitionFrom:[NSIndexPath indexPathForRow:0 inSection:index] toIndexPath:indexPath];
+        //[self setCurrentSelectedIndexPath:indexPath];
     }
 
 }
