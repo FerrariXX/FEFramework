@@ -9,6 +9,7 @@
 #import "FEScrollPageViewController.h"
 
 
+
 #define  kIndicateViewTag  0x35
 @interface FEScrollPageViewController ()
 @property(nonatomic, strong)NSMutableArray *tabsViews;//UIScrollView
@@ -289,9 +290,10 @@
         } completion:^(BOOL finished) {
         }];
         
-       //tab个数小时不做滚动
-       NSInteger count =  [[UIScreen mainScreen] bounds].size.width /self.tabItemWidth;
-        if ([self.tabsDict count] > count) {
+        //tab个数小时不做滚动
+        //NSInteger count =  [[UIScreen mainScreen] bounds].size.width /self.tabItemWidth;
+        //if ([self.tabsDict count] > count)
+        {
             //UIScrollView *scrollView = [self.tabsViews objectAtIndex:fromIndexPath.section];
             CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
             offsetX  = offsetX < 0 ? 0.0 : offsetX;
