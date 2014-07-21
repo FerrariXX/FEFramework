@@ -70,7 +70,7 @@
 - (void)setImageItems:(NSArray*)items
         selectedBlock:(FEScrollPageSelectedBlock)selectedBlock
            isAutoPlay:(BOOL)isAutoPlay{
-    self.edgeInsets = UIEdgeInsetsMake(0, 3, 0, 3);
+    self.edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     _itemWidth =  [[UIScreen mainScreen] bounds].size.width;
     self.isHiddenPageController = NO;
     self.imageItems    = items;
@@ -134,6 +134,7 @@
     self.scrollView.pagingEnabled = (self.itemWidth == [UIScreen mainScreen].bounds.size.width);
     self.scrollView.delegate = self;
     self.scrollView.alwaysBounceVertical = NO;
+    self.scrollView.backgroundColor = [UIColor whiteColor];
     //init image items
     NSInteger originX = 0 ;
     //for (FEImageItem *imageItem in self.imageItems){
@@ -148,6 +149,7 @@
             [self.scrollView addSubview:imageView];
             originX += self.itemWidth;
             imageView.backgroundColor = [UIColor clearColor];//originX/imageView.frame.size.width ?  [UIColor blueColor] : [UIColor orangeColor];
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
         }else {
             NSLog(@">>>Error:FEScrollPageView.imageItems is not kind of class FEImageItem.");
         }
