@@ -189,7 +189,7 @@
     //update selected index
     for (NSInteger index = 0; index < [self.currentIndex count]; index ++ ) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[[self.currentIndex objectAtIndex:index] integerValue] inSection:index];
-        [self transitionFrom:[NSIndexPath indexPathForRow:0 inSection:index] toIndexPath:indexPath];
+        [self transitionFrom:[NSIndexPath indexPathForRow:0 inSection:index] toIndexPath:indexPath animation:NO];
         //[self setCurrentSelectedIndexPath:indexPath];
     }
 
@@ -211,7 +211,7 @@
             }];
             
             if (!self.isSingletonContentVC) {
-                [self transitionFrom:[NSIndexPath indexPathForRow:originIndex inSection:selectedIndexPath.section] toIndexPath:selectedIndexPath];
+                [self transitionFrom:[NSIndexPath indexPathForRow:originIndex inSection:selectedIndexPath.section] toIndexPath:selectedIndexPath animation:YES];
             } else {
                 [self.delegate viewPage:self didChangeTabToSection:selectedIndexPath.section index:selectedIndexPath.row contentVC:nil];
             }
@@ -235,7 +235,7 @@
     return vc;
 }
 
-- (void)transitionFrom:(NSIndexPath*)fromIndexPath toIndexPath:(NSIndexPath*)toIndexPath{
+- (void)transitionFrom:(NSIndexPath*)fromIndexPath toIndexPath:(NSIndexPath*)toIndexPath animation:(BOOL)animated{
     
     UIViewController *fromVC = [self viewControllerWithIndexPath:fromIndexPath];
     UIViewController *toVC   = [self viewControllerWithIndexPath:toIndexPath];
@@ -260,51 +260,73 @@
         fromWrapperView = fromView;
     }
     
-    CGFloat directionWidth = fromIndexPath.row < toIndexPath.row ? 320 : -320;
+    if (animated) {
+        CGFloat directionWidth = fromIndexPath.row < toIndexPath.row ? 320 : -320;
+        CGRect rect = toVC.view.frame;
+        toVC.view.frame = CGRectMake(directionWidth, rect.origin.y, rect.size.width, rect.size.height);
+        [UIView transitionWithView:fromWrapperView
+                          duration:0.3
+                           options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                               CGRect rect = fromWrapperView.frame;
+                               rect.origin.x = -directionWidth;
+                               [fromWrapperView setFrame:rect];
+                               [toVC.view setFrame:toVC.view.bounds];
+                           }
+                        completion:^(BOOL finished){
+                            [fromWrapperView removeFromSuperview];
+                            [self.contentView addSubview:toVC.view];
+                            [self.delegate viewPage:self didChangeTabToSection:toIndexPath.section index:toIndexPath.row contentVC:toVC];
+                            
+                            //Reset contentOffset when scrollview
+                            if ([fromVC.view isKindOfClass:[UIScrollView class]]) {
+                                ((UIScrollView*)fromVC.view).contentOffset = CGPointZero;
+                            }
+                        }];
 
-    CGRect rect = toVC.view.frame;
-    toVC.view.frame = CGRectMake(directionWidth, rect.origin.y, rect.size.width, rect.size.height);
-    [UIView transitionWithView:fromWrapperView
-                      duration:0.3
-                       options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                           CGRect rect = fromWrapperView.frame;
-                           rect.origin.x = -directionWidth;
-                           [fromWrapperView setFrame:rect];
-                           [toVC.view setFrame:toVC.view.bounds];
-                       }
-                    completion:^(BOOL finished){
-                        [fromWrapperView removeFromSuperview];
-                        [self.contentView addSubview:toVC.view];
-                        [self.delegate viewPage:self didChangeTabToSection:toIndexPath.section index:toIndexPath.row contentVC:toVC];
-                        
-                        //Reset contentOffset when scrollview
-                        if ([fromVC.view isKindOfClass:[UIScrollView class]]) {
-                            ((UIScrollView*)fromVC.view).contentOffset = CGPointZero;
-                        }
-                    }];
-
-    //tab view transition
-    if (fromIndexPath.section == toIndexPath.section) {
+        //tab view transition
+        if (fromIndexPath.section == toIndexPath.section) {
+            [self setTabViewHighlighted:NO indexPath:fromIndexPath];
+            [self setTabViewHighlighted:YES indexPath:toIndexPath];
+            UIScrollView *scrollView = [self.tabsViews objectAtIndex:toIndexPath.section];
+            UIView * indicateView = [scrollView viewWithTag:kIndicateViewTag];
+            [UIView animateWithDuration:0.25 animations:^{
+                indicateView.frame = CGRectMake(toIndexPath.row * self.tabItemWidth,  indicateView.frame.origin.y, indicateView.frame.size.width, indicateView.frame.size.height);
+            } completion:^(BOOL finished) {
+            }];
+            
+           //tab个数小时不做滚动
+            //NSInteger count =  [[UIScreen mainScreen] bounds].size.width /self.tabItemWidth;
+            //if ([self.tabsDict count] > count)
+            {
+                //UIScrollView *scrollView = [self.tabsViews objectAtIndex:fromIndexPath.section];
+                CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
+                offsetX  = offsetX < 0 ? 0.0 : offsetX;
+                [scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+                //[scrollView scrollRectToVisible:CGRectMake(roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0), 0, self.tabItemWidth, self.tabHeight) animated:YES];
+            }
+        }
+    } else {
+        
+        [fromWrapperView removeFromSuperview];
+        [self.contentView addSubview:toVC.view];
+        [self.delegate viewPage:self didChangeTabToSection:toIndexPath.section index:toIndexPath.row contentVC:toVC];
+        
+        //Reset contentOffset when scrollview
+        if ([fromVC.view isKindOfClass:[UIScrollView class]]) {
+            ((UIScrollView*)fromVC.view).contentOffset = CGPointZero;
+        }
+        
         [self setTabViewHighlighted:NO indexPath:fromIndexPath];
         [self setTabViewHighlighted:YES indexPath:toIndexPath];
         UIScrollView *scrollView = [self.tabsViews objectAtIndex:toIndexPath.section];
         UIView * indicateView = [scrollView viewWithTag:kIndicateViewTag];
-        [UIView animateWithDuration:0.25 animations:^{
-            indicateView.frame = CGRectMake(toIndexPath.row * self.tabItemWidth,  indicateView.frame.origin.y, indicateView.frame.size.width, indicateView.frame.size.height);
-        } completion:^(BOOL finished) {
-        }];
+        indicateView.frame = CGRectMake(toIndexPath.row * self.tabItemWidth,  indicateView.frame.origin.y, indicateView.frame.size.width, indicateView.frame.size.height);
         
-        //tab个数小时不做滚动
-        //NSInteger count =  [[UIScreen mainScreen] bounds].size.width /self.tabItemWidth;
-        //if ([self.tabsDict count] > count)
-        {
-            //UIScrollView *scrollView = [self.tabsViews objectAtIndex:fromIndexPath.section];
-            CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
-            offsetX  = offsetX < 0 ? 0.0 : offsetX;
-            [scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
-            //[scrollView scrollRectToVisible:CGRectMake(roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0), 0, self.tabItemWidth, self.tabHeight) animated:YES];
-        }
+        CGFloat offsetX = toIndexPath.row * self.tabItemWidth - roundf((self.view.bounds.size.width - self.tabItemWidth)/2.0);
+        offsetX  = offsetX < 0 ? 0.0 : offsetX;
+        [scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     }
+    
     [fromVC removeFromParentViewController];
     [self addChildViewController:toVC];
     self.currentViewController = toVC;
@@ -341,7 +363,7 @@
     NSLog(@">>>swipe from %d to %d",index, toIndex);
     if (toIndex >= 0 && toIndex < [[self.tabsDict objectForKey:[NSNumber numberWithInteger:0]] count] ) {
         [self.currentIndex replaceObjectAtIndex:0 withObject:[NSNumber numberWithInteger:toIndex]];
-        [self transitionFrom:[NSIndexPath indexPathForRow:index inSection:0] toIndexPath:[NSIndexPath indexPathForRow:toIndex inSection:0]];
+        [self transitionFrom:[NSIndexPath indexPathForRow:index inSection:0] toIndexPath:[NSIndexPath indexPathForRow:toIndex inSection:0] animation:YES];
     }
 }
 
