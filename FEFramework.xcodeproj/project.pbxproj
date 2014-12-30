@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84B32E031A5276BF005839AE /* FECustomTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DF61A5276BF005839AE /* FECustomTabBar.h */; };
+		84B32E041A5276BF005839AE /* FECustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32DF71A5276BF005839AE /* FECustomTabBar.m */; };
+		84B32E051A5276BF005839AE /* FECustomTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DF81A5276BF005839AE /* FECustomTabBarController.h */; };
+		84B32E061A5276BF005839AE /* FECustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32DF91A5276BF005839AE /* FECustomTabBarController.m */; };
+		84B32E071A5276BF005839AE /* FECustomTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DFA1A5276BF005839AE /* FECustomTabBarItem.h */; };
+		84B32E081A5276BF005839AE /* FECustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32DFB1A5276BF005839AE /* FECustomTabBarItem.m */; };
+		84B32E091A5276BF005839AE /* FETabBarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DFC1A5276BF005839AE /* FETabBarButton.h */; };
+		84B32E0A1A5276BF005839AE /* FETabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32DFD1A5276BF005839AE /* FETabBarButton.m */; };
+		84B32E0B1A5276BF005839AE /* FETabbarConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DFE1A5276BF005839AE /* FETabbarConst.h */; };
+		84B32E0C1A5276BF005839AE /* FEViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32DFF1A5276BF005839AE /* FEViewController.h */; };
+		84B32E0D1A5276BF005839AE /* FEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32E001A5276BF005839AE /* FEViewController.m */; };
+		84B32E0E1A5276BF005839AE /* UITabBarItem+FECustomBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B32E011A5276BF005839AE /* UITabBarItem+FECustomBarItem.h */; };
+		84B32E0F1A5276BF005839AE /* UITabBarItem+FECustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B32E021A5276BF005839AE /* UITabBarItem+FECustomBarItem.m */; };
 		84F5967D195FC0D100827C01 /* FEToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F5967B195FC0D100827C01 /* FEToastView.h */; };
 		84F5967E195FC0D100827C01 /* FEToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F5967C195FC0D100827C01 /* FEToastView.m */; };
 		C30582E919320DB200DE14E5 /* FEMicroMsgPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */; };
@@ -87,6 +100,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84B32DF61A5276BF005839AE /* FECustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FECustomTabBar.h; sourceTree = "<group>"; };
+		84B32DF71A5276BF005839AE /* FECustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FECustomTabBar.m; sourceTree = "<group>"; };
+		84B32DF81A5276BF005839AE /* FECustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FECustomTabBarController.h; sourceTree = "<group>"; };
+		84B32DF91A5276BF005839AE /* FECustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FECustomTabBarController.m; sourceTree = "<group>"; };
+		84B32DFA1A5276BF005839AE /* FECustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FECustomTabBarItem.h; sourceTree = "<group>"; };
+		84B32DFB1A5276BF005839AE /* FECustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FECustomTabBarItem.m; sourceTree = "<group>"; };
+		84B32DFC1A5276BF005839AE /* FETabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FETabBarButton.h; sourceTree = "<group>"; };
+		84B32DFD1A5276BF005839AE /* FETabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FETabBarButton.m; sourceTree = "<group>"; };
+		84B32DFE1A5276BF005839AE /* FETabbarConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FETabbarConst.h; sourceTree = "<group>"; };
+		84B32DFF1A5276BF005839AE /* FEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEViewController.h; sourceTree = "<group>"; };
+		84B32E001A5276BF005839AE /* FEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEViewController.m; sourceTree = "<group>"; };
+		84B32E011A5276BF005839AE /* UITabBarItem+FECustomBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+FECustomBarItem.h"; sourceTree = "<group>"; };
+		84B32E021A5276BF005839AE /* UITabBarItem+FECustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+FECustomBarItem.m"; sourceTree = "<group>"; };
 		84F5967B195FC0D100827C01 /* FEToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEToastView.h; sourceTree = "<group>"; };
 		84F5967C195FC0D100827C01 /* FEToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEToastView.m; sourceTree = "<group>"; };
 		C30582E319320DB200DE14E5 /* FEMicroMsgPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMicroMsgPopoverView.h; sourceTree = "<group>"; };
@@ -181,6 +207,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84B32DF51A5276BF005839AE /* FETabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84B32DFE1A5276BF005839AE /* FETabbarConst.h */,
+				84B32DF61A5276BF005839AE /* FECustomTabBar.h */,
+				84B32DF71A5276BF005839AE /* FECustomTabBar.m */,
+				84B32DF81A5276BF005839AE /* FECustomTabBarController.h */,
+				84B32DF91A5276BF005839AE /* FECustomTabBarController.m */,
+				84B32DFA1A5276BF005839AE /* FECustomTabBarItem.h */,
+				84B32DFB1A5276BF005839AE /* FECustomTabBarItem.m */,
+				84B32DFC1A5276BF005839AE /* FETabBarButton.h */,
+				84B32DFD1A5276BF005839AE /* FETabBarButton.m */,
+				84B32DFF1A5276BF005839AE /* FEViewController.h */,
+				84B32E001A5276BF005839AE /* FEViewController.m */,
+				84B32E011A5276BF005839AE /* UITabBarItem+FECustomBarItem.h */,
+				84B32E021A5276BF005839AE /* UITabBarItem+FECustomBarItem.m */,
+			);
+			path = FETabbarViewController;
+			sourceTree = "<group>";
+		};
 		C30582E219320DB200DE14E5 /* FECommonUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A44CB018FC33C000E9B254 /* FEFramework.h */,
+				84B32DF51A5276BF005839AE /* FETabbarViewController */,
 				C30582E219320DB200DE14E5 /* FECommonUI */,
 				C35C341F18FEC5B90062C334 /* FESidePanel */,
 				C3A44C8618FC33C000E9B254 /* FECategory */,
@@ -362,11 +409,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B32E031A5276BF005839AE /* FECustomTabBar.h in Headers */,
 				C3A44CDB18FC33C100E9B254 /* UIDevice+FEExtension.h in Headers */,
+				84B32E0E1A5276BF005839AE /* UITabBarItem+FECustomBarItem.h in Headers */,
 				C3A44CF418FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.h in Headers */,
 				C3A44CCD18FC33C100E9B254 /* NSFileManager+FEExtension.h in Headers */,
 				C3A44CF718FC33C100E9B254 /* FEEasingFunctions.h in Headers */,
 				C3A44CF018FC33C100E9B254 /* FEFramework.h in Headers */,
+				84B32E0C1A5276BF005839AE /* FEViewController.h in Headers */,
 				C3A44CD318FC33C100E9B254 /* NSObject+FESwizzle.h in Headers */,
 				C3A44CD118FC33C100E9B254 /* NSObject+FENib.h in Headers */,
 				C3A44D0018FC33C100E9B254 /* FEUtil.h in Headers */,
@@ -389,14 +439,18 @@
 				C30582EB19320DB200DE14E5 /* FEScrollPageView.h in Headers */,
 				C3A44CCB18FC33C100E9B254 /* NSDictionary+FEExtension.h in Headers */,
 				C3A44CFE18FC33C100E9B254 /* FEReachAbilityManager.h in Headers */,
+				84B32E051A5276BF005839AE /* FECustomTabBarController.h in Headers */,
+				84B32E091A5276BF005839AE /* FETabBarButton.h in Headers */,
 				C3A44CE518FC33C100E9B254 /* UIView+FEAnimation.h in Headers */,
 				C3A44CEC18FC33C100E9B254 /* UIView+FEHierarchy.h in Headers */,
 				C3A44CD718FC33C100E9B254 /* UIButton+FEExtension.h in Headers */,
+				84B32E0B1A5276BF005839AE /* FETabbarConst.h in Headers */,
 				C3A44CF118FC33C100E9B254 /* FEDebug.h in Headers */,
 				C3A44CC918FC33C100E9B254 /* NSDate+FEExtension.h in Headers */,
 				C3A44CFC18FC33C100E9B254 /* FEReachability.h in Headers */,
 				C3A44CC718FC33C100E9B254 /* NSArray+FEExtension.h in Headers */,
 				C3A44CD518FC33C100E9B254 /* NSString+FEExtension.h in Headers */,
+				84B32E071A5276BF005839AE /* FECustomTabBarItem.h in Headers */,
 				C3A44CF318FC33C100E9B254 /* FEMacroDefine.h in Headers */,
 				C3A44CDF18FC33C100E9B254 /* UIImage+FEExtension.h in Headers */,
 				C3A44CE318FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.h in Headers */,
@@ -517,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F5967E195FC0D100827C01 /* FEToastView.m in Sources */,
+				84B32E041A5276BF005839AE /* FECustomTabBar.m in Sources */,
 				C3A44CD818FC33C100E9B254 /* UIButton+FEExtension.m in Sources */,
 				C3094A93193B639100BDE4A9 /* FEScrollPageViewController.m in Sources */,
 				C3A44CC818FC33C100E9B254 /* NSArray+FEExtension.m in Sources */,
@@ -533,6 +588,7 @@
 				C30582EE19320DB200DE14E5 /* UIScrollView+FECover.m in Sources */,
 				C3A44CFF18FC33C100E9B254 /* FEReachAbilityManager.m in Sources */,
 				C3A44CDC18FC33C100E9B254 /* UIDevice+FEExtension.m in Sources */,
+				84B32E081A5276BF005839AE /* FECustomTabBarItem.m in Sources */,
 				C35C342518FEC5B90062C334 /* FESidePanelController.m in Sources */,
 				C3A44CD218FC33C100E9B254 /* NSObject+FENib.m in Sources */,
 				C3A44CCE18FC33C100E9B254 /* NSFileManager+FEExtension.m in Sources */,
@@ -541,16 +597,20 @@
 				C3A44CDE18FC33C100E9B254 /* UIDevice+FEProcess.m in Sources */,
 				C3A44CD618FC33C100E9B254 /* NSString+FEExtension.m in Sources */,
 				C3A44CF518FC33C100E9B254 /* CAKeyframeAnimation+FEEasing.m in Sources */,
+				84B32E0A1A5276BF005839AE /* FETabBarButton.m in Sources */,
 				C3A44CE418FC33C100E9B254 /* UITableView+FEAutoResizeKeyboard.m in Sources */,
 				C3A44CCC18FC33C100E9B254 /* NSDictionary+FEExtension.m in Sources */,
 				C3A44CF618FC33C100E9B254 /* FEEasingFunctions.c in Sources */,
 				C3A44CE218FC33C100E9B254 /* UIScreen+FEFrame.m in Sources */,
+				84B32E061A5276BF005839AE /* FECustomTabBarController.m in Sources */,
 				C3A44CD418FC33C100E9B254 /* NSObject+FESwizzle.m in Sources */,
 				C3A44CDA18FC33C100E9B254 /* UIColor+FEExtension.m in Sources */,
 				C3A44CE618FC33C100E9B254 /* UIView+FEAnimation.m in Sources */,
 				C3A44CED18FC33C100E9B254 /* UIView+FEHierarchy.m in Sources */,
+				84B32E0F1A5276BF005839AE /* UITabBarItem+FECustomBarItem.m in Sources */,
 				C3A44CCA18FC33C100E9B254 /* NSDate+FEExtension.m in Sources */,
 				C30582EC19320DB200DE14E5 /* FEScrollPageView.m in Sources */,
+				84B32E0D1A5276BF005839AE /* FEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

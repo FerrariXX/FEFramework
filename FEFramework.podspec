@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   
   #s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => "'' " }
   
-  #s.dependency   'xx'
+  s.dependency   'SDWebImage'
   #s.libraries = 'xx'
  
 end
