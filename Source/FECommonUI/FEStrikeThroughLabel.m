@@ -1,6 +1,6 @@
 //
 //  FEStrikeThroughLabel.m
-//  StrikeThroughLabel
+//
 //
 //  Created by admin on 14-9-15.
 //
@@ -62,7 +62,6 @@
     NSString *tempText = [self.text copy];
     self.text = @"";
     self.text = tempText;
-    [tempText release];
 }
 
 -(void)setStyle:(FEStrikeThroughStyle)style{

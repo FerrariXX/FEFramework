@@ -1,6 +1,5 @@
 //
 //  FEStrikeThroughLabel.h
-//  StrikeThroughLabel
 //
 //  Created by admin on 14-9-15.
 //
